@@ -1,0 +1,12 @@
+# Python cruft
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+env/
+venv/
+
+# Logs and temp files
+*.log
+*.tmp
+*.out

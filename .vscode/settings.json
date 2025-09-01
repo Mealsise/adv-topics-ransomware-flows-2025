@@ -1,0 +1,47 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "terminal.integrated.defaultProfile.windows": "WSL",
+    "terminal.integrated.profiles.windows": {
+    "WSL": {
+        "path": "C:\\WINDOWS\\System32\\wsl.exe",
+        "args": ["-d", "Ubuntu"]
+    }
+    },
+    "workbench.sideBar.location": "right",
+    // "editor.minimap.enabled": false,                          // Saves space
+    "editor.minimap.maxColumn": 120,
+    "editor.smoothScrolling": true,                           // Nicer scrolling
+    "editor.cursorSmoothCaretAnimation": "on",                // Looks good, feels good
+    "editor.renderWhitespace": "boundary",
+    "editor.tabSize": 4,
+    "workbench.startupEditor": "none",
+    "workbench.editor.enablePreview": false,
+    "breadcrumbs.enabled": true,
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.cursorBlinking": true,
+    "highlight.regexes": {
+        "(?<![\"'])\\b([bdefgijklmnopqrstuvw])\\b(?![\"'])": {
+        // "(?<![\"'])(?<!\\.h)(?<!\\.c)(?<!#include )\\b([bdefgijklmnopqrstuvw])\\b(?![\"'])": {
+            "filterLanguageRegex": "^(python|c|cpp)$",
+            "decorations": [
+                {
+                    "color": "#ff5555",
+                    "backgroundColor": "#3c0000"
+                }
+            ]
+        },
+    },
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "editor.cursorBlinking": "phase",
+    "editor.stickyScroll.enabled": true,
+    "files.watcherExclude": { "**/build/**": true },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/build/**": true
+    }
+}
