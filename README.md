@@ -73,7 +73,7 @@ Each campaign file follows a common template (`campaign_template.md`) capturing:
 
 ---
 
-## 🛠 Workflow
+## Workflow
 
 1. Add a campaign to **pending/**.
 2. Evaluate its documentation quality and analytical value.
@@ -83,14 +83,14 @@ Each campaign file follows a common template (`campaign_template.md`) capturing:
 
 ---
 
-## 🔗 References
+## References
 
 * [MITRE ATT\&CK Flow GitHub](https://github.com/center-for-threat-informed-defense/attack-flow)
 * [Attack Flow Builder (online tool)](https://center-for-threat-informed-defense.github.io/attack-flow/ui/)
 
 ---
 
-## ✅ Status
+## Status
 
 Target: **7–10 high-value campaigns** fully mapped with Attack Flows.
 Additional campaigns may be documented for context or comparison.
