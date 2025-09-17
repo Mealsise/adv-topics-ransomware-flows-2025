@@ -7,6 +7,7 @@ _Auto-generated. Edit individual campaign files in `campaigns/`._
 | Name | Group | Year | Analytic | DocQ | Status |
 |---|---|---:|:---:|:---:|:---:|
 | [Change Healthcare – ALPHV/BlackCat](../campaigns/shortlist/change_healthcare_blackcat_2024.md) | BlackCat (ALPHV) | 2024 | Very High | Very high | SHORTLIST |
+| [Health Service Executive (Ireland) – Conti](../campaigns/shortlist/hse_conti_2021.md) | Conti | 2021 | Very High | Very high | SHORTLIST |
 
 ## PENDING
 
@@ -17,7 +18,6 @@ _Auto-generated. Edit individual campaign files in `campaigns/`._
 | [MGM Resorts – ALPHV/BlackCat (Scattered Spider affiliate)](../campaigns/pending/mgm_blackcat_2023.md) | BlackCat (ALPHV) | 2023 | High | High | PENDING |
 | [NEW Cooperative – BlackMatter](../campaigns/pending/new_coop_blackmatter_2021.md) | BlackMatter (DarkSide) | 2021 | High | High | PENDING |
 | [ExecuPharm (Parexel) – Clop](../campaigns/pending/execupharm_clop_2020.md) | Clop | 2020 | High | High | PENDING |
-| [Health Service Executive (Ireland) – Conti](../campaigns/pending/hse_conti_2021.md) | Conti | 2021 | Very High | Very high | PENDING |
 | [Colonial Pipeline – DarkSide](../campaigns/pending/colonial_darkside_2021.md) | DarkSide | 2021 | High | High | PENDING |
 | [Foxconn (Baja, MX) – DoppelPaymer](../campaigns/pending/foxconn_doppelpaymer_2020.md) | DoppelPaymer | 2020 | Medium | Medium-high | PENDING |
 | [Barnes & Noble – Egregor](../campaigns/pending/barnes_noble_egregor_2020.md) | Egregor | 2020 | Medium | Medium-high | PENDING |
@@ -54,7 +54,7 @@ _None_
 | [MGM Resorts – ALPHV/BlackCat (Scattered Spider affiliate)](../campaigns/pending/mgm_blackcat_2023.md) | BlackCat (ALPHV) | 2023 | High | High | PENDING |
 | [NEW Cooperative – BlackMatter](../campaigns/pending/new_coop_blackmatter_2021.md) | BlackMatter (DarkSide) | 2021 | High | High | PENDING |
 | [ExecuPharm (Parexel) – Clop](../campaigns/pending/execupharm_clop_2020.md) | Clop | 2020 | High | High | PENDING |
-| [Health Service Executive (Ireland) – Conti](../campaigns/pending/hse_conti_2021.md) | Conti | 2021 | Very High | Very high | PENDING |
+| [Health Service Executive (Ireland) – Conti](../campaigns/shortlist/hse_conti_2021.md) | Conti | 2021 | Very High | Very high | SHORTLIST |
 | [Colonial Pipeline – DarkSide](../campaigns/pending/colonial_darkside_2021.md) | DarkSide | 2021 | High | High | PENDING |
 | [Foxconn (Baja, MX) – DoppelPaymer](../campaigns/pending/foxconn_doppelpaymer_2020.md) | DoppelPaymer | 2020 | Medium | Medium-high | PENDING |
 | [Barnes & Noble – Egregor](../campaigns/pending/barnes_noble_egregor_2020.md) | Egregor | 2020 | Medium | Medium-high | PENDING |
