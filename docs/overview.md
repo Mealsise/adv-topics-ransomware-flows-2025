@@ -4,7 +4,9 @@ _Auto-generated. Edit individual campaign files in `campaigns/`._
 
 ## SHORTLIST
 
-_None_
+| Name | Group | Year | Analytic | DocQ | Status |
+|---|---|---:|:---:|:---:|:---:|
+| [Change Healthcare – ALPHV/BlackCat](../campaigns/shortlist/change_healthcare_blackcat_2024.md) | BlackCat (ALPHV) | 2024 | Very High | Very high | SHORTLIST |
 
 ## PENDING
 
@@ -12,7 +14,6 @@ _None_
 |---|---|---:|:---:|:---:|:---:|
 | [AXA Asia Assistance – Avaddon](../campaigns/pending/axa_avaddon_2021.md) | Avaddon | 2021 | Medium-High | High | PENDING |
 | [D.C. Metropolitan Police – Babuk](../campaigns/pending/dc_mpd_babuk_2021.md) | Babuk | 2021 | High | High | PENDING |
-| [Change Healthcare – ALPHV/BlackCat](../campaigns/pending/change_healthcare_blackcat_2024.md) | BlackCat (ALPHV) | 2024 | Very High | Very high | PENDING |
 | [MGM Resorts – ALPHV/BlackCat (Scattered Spider affiliate)](../campaigns/pending/mgm_blackcat_2023.md) | BlackCat (ALPHV) | 2023 | High | High | PENDING |
 | [NEW Cooperative – BlackMatter](../campaigns/pending/new_coop_blackmatter_2021.md) | BlackMatter (DarkSide) | 2021 | High | High | PENDING |
 | [ExecuPharm (Parexel) – Clop](../campaigns/pending/execupharm_clop_2020.md) | Clop | 2020 | High | High | PENDING |
@@ -49,7 +50,7 @@ _None_
 |---|---|---:|:---:|:---:|:---:|
 | [AXA Asia Assistance – Avaddon](../campaigns/pending/axa_avaddon_2021.md) | Avaddon | 2021 | Medium-High | High | PENDING |
 | [D.C. Metropolitan Police – Babuk](../campaigns/pending/dc_mpd_babuk_2021.md) | Babuk | 2021 | High | High | PENDING |
-| [Change Healthcare – ALPHV/BlackCat](../campaigns/pending/change_healthcare_blackcat_2024.md) | BlackCat (ALPHV) | 2024 | Very High | Very high | PENDING |
+| [Change Healthcare – ALPHV/BlackCat](../campaigns/shortlist/change_healthcare_blackcat_2024.md) | BlackCat (ALPHV) | 2024 | Very High | Very high | SHORTLIST |
 | [MGM Resorts – ALPHV/BlackCat (Scattered Spider affiliate)](../campaigns/pending/mgm_blackcat_2023.md) | BlackCat (ALPHV) | 2023 | High | High | PENDING |
 | [NEW Cooperative – BlackMatter](../campaigns/pending/new_coop_blackmatter_2021.md) | BlackMatter (DarkSide) | 2021 | High | High | PENDING |
 | [ExecuPharm (Parexel) – Clop](../campaigns/pending/execupharm_clop_2020.md) | Clop | 2020 | High | High | PENDING |
