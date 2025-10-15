@@ -4,6 +4,9 @@ from pprint import pprint
 
 # File path
 file_path = Path("flows/Change Healthcare - BlackCat (ALPHV).afb")
+file_path = Path("flows/Colonial Pipeline - DarkSide.afb")
+file_path = Path("flows/Health Service Executive - Conti.afb")
+file_path = Path("flows/Kaseya VSA - REvil (Sodinokibi).afb")
 
 # IDs to ignore
 skip_ids = {"horizontal_anchor", "vertical_anchor", "dynamic_line", "generic_latch", "generic_handle"}

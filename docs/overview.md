@@ -9,6 +9,7 @@ _Auto-generated. Edit individual campaign files in `campaigns/`._
 | [Change Healthcare – ALPHV/BlackCat](../campaigns/shortlist/change_healthcare_blackcat_2024.md) | BlackCat (ALPHV) | 2024 | Very High | Very high | SHORTLIST |
 | [Health Service Executive (Ireland) – Conti](../campaigns/shortlist/hse_conti_2021.md) | Conti | 2021 | Very High | Very high | SHORTLIST |
 | [Colonial Pipeline – DarkSide](../campaigns/shortlist/colonial_darkside_2021.md) | DarkSide | 2021 | High | High | SHORTLIST |
+| [Kaseya VSA (MSP supply chain) – REvil](../campaigns/shortlist/kaseya_revil_2021.md) | REvil | 2021 | Very High | High | SHORTLIST |
 
 ## PENDING
 
@@ -36,7 +37,6 @@ _Auto-generated. Edit individual campaign files in `campaigns/`._
 | [Energias de Portugal (EDP) – Ragnar Locker](../campaigns/pending/edp_ragnarlocker_2020.md) | Ragnar Locker | 2020 | High | High | PENDING |
 | [Acer – REvil](../campaigns/pending/acer_revil_2021.md) | REvil | 2021 | Medium-High | High | PENDING |
 | [JBS Foods – REvil](../campaigns/pending/jbs_revil_2021.md) | REvil | 2021 | Medium | High | PENDING |
-| [Kaseya VSA (MSP supply chain) – REvil](../campaigns/pending/kaseya_revil_2021.md) | REvil | 2021 | Very High | High | PENDING |
 | [Travelex – REvil (Sodinokibi)](../campaigns/pending/travelex_revil_2020.md) | REvil | 2019 | High | High | PENDING |
 | [City of Dallas – Royal](../campaigns/pending/dallas_royal_2023.md) | Royal | 2023 | Medium | Medium-high | PENDING |
 
@@ -73,6 +73,6 @@ _None_
 | [Energias de Portugal (EDP) – Ragnar Locker](../campaigns/pending/edp_ragnarlocker_2020.md) | Ragnar Locker | 2020 | High | High | PENDING |
 | [Acer – REvil](../campaigns/pending/acer_revil_2021.md) | REvil | 2021 | Medium-High | High | PENDING |
 | [JBS Foods – REvil](../campaigns/pending/jbs_revil_2021.md) | REvil | 2021 | Medium | High | PENDING |
-| [Kaseya VSA (MSP supply chain) – REvil](../campaigns/pending/kaseya_revil_2021.md) | REvil | 2021 | Very High | High | PENDING |
+| [Kaseya VSA (MSP supply chain) – REvil](../campaigns/shortlist/kaseya_revil_2021.md) | REvil | 2021 | Very High | High | SHORTLIST |
 | [Travelex – REvil (Sodinokibi)](../campaigns/pending/travelex_revil_2020.md) | REvil | 2019 | High | High | PENDING |
 | [City of Dallas – Royal](../campaigns/pending/dallas_royal_2023.md) | Royal | 2023 | Medium | Medium-high | PENDING |
