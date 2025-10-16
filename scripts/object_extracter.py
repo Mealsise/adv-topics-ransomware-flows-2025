@@ -8,6 +8,7 @@ file_path = Path("flows/Colonial Pipeline - DarkSide.afb")
 file_path = Path("flows/Health Service Executive - Conti.afb")
 file_path = Path("flows/Kaseya VSA - REvil (Sodinokibi).afb")
 file_path = Path("flows/D.C. Metropolitan Police - Babuk.afb")
+file_path = Path("flows/Royal Mail - LockBit 3.0.afb")
 
 # IDs to ignore
 skip_ids = {"horizontal_anchor", "vertical_anchor", "dynamic_line", "generic_latch", "generic_handle"}

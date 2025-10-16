@@ -10,6 +10,7 @@ _Auto-generated. Edit individual campaign files in `campaigns/`._
 | [Change Healthcare – ALPHV/BlackCat](../campaigns/shortlist/change_healthcare_blackcat_2024.md) | BlackCat (ALPHV) | 2024 | Very High | Very high | SHORTLIST |
 | [Health Service Executive (Ireland) – Conti](../campaigns/shortlist/hse_conti_2021.md) | Conti | 2021 | Very High | Very high | SHORTLIST |
 | [Colonial Pipeline – DarkSide](../campaigns/shortlist/colonial_darkside_2021.md) | DarkSide | 2021 | High | High | SHORTLIST |
+| [Royal Mail (International) – LockBit 3.0](../campaigns/shortlist/royal_mail_lockbit3_2023.md) | LockBit 3.0 (Black) | 2023 | Medium-High | High | SHORTLIST |
 | [Kaseya VSA (MSP supply chain) – REvil](../campaigns/shortlist/kaseya_revil_2021.md) | REvil | 2021 | Very High | High | SHORTLIST |
 
 ## PENDING
@@ -24,7 +25,6 @@ _Auto-generated. Edit individual campaign files in `campaigns/`._
 | [Barnes & Noble – Egregor](../campaigns/pending/barnes_noble_egregor_2020.md) | Egregor | 2020 | Medium | Medium-high | PENDING |
 | [CD Projekt Red – HelloKitty (DeathRansom)](../campaigns/pending/cdpr_hellokitty_2021.md) | HelloKitty | 2021 | Medium-High | High | PENDING |
 | [Accenture – LockBit 2.0](../campaigns/pending/accenture_lockbit_2021.md) | LockBit 2.0 | 2021 | Medium | Medium | PENDING |
-| [Royal Mail (International) – LockBit 3.0](../campaigns/pending/royal_mail_lockbit3_2023.md) | LockBit 3.0 (Black) | 2023 | Medium-High | High | PENDING |
 | [Cognizant – Maze](../campaigns/pending/cognizant_maze_2020.md) | Maze | 2020 | High | High | PENDING |
 | [Allied Universal – Maze](../campaigns/pending/allied_universal_maze_2019.md) | Maze | 2019 | High | High | PENDING |
 | [City of Pensacola – Maze](../campaigns/pending/pensacola_maze_2019.md) | Maze | 2019 | High | High | PENDING |
@@ -60,7 +60,7 @@ _None_
 | [Barnes & Noble – Egregor](../campaigns/pending/barnes_noble_egregor_2020.md) | Egregor | 2020 | Medium | Medium-high | PENDING |
 | [CD Projekt Red – HelloKitty (DeathRansom)](../campaigns/pending/cdpr_hellokitty_2021.md) | HelloKitty | 2021 | Medium-High | High | PENDING |
 | [Accenture – LockBit 2.0](../campaigns/pending/accenture_lockbit_2021.md) | LockBit 2.0 | 2021 | Medium | Medium | PENDING |
-| [Royal Mail (International) – LockBit 3.0](../campaigns/pending/royal_mail_lockbit3_2023.md) | LockBit 3.0 (Black) | 2023 | Medium-High | High | PENDING |
+| [Royal Mail (International) – LockBit 3.0](../campaigns/shortlist/royal_mail_lockbit3_2023.md) | LockBit 3.0 (Black) | 2023 | Medium-High | High | SHORTLIST |
 | [Cognizant – Maze](../campaigns/pending/cognizant_maze_2020.md) | Maze | 2020 | High | High | PENDING |
 | [Allied Universal – Maze](../campaigns/pending/allied_universal_maze_2019.md) | Maze | 2019 | High | High | PENDING |
 | [City of Pensacola – Maze](../campaigns/pending/pensacola_maze_2019.md) | Maze | 2019 | High | High | PENDING |
