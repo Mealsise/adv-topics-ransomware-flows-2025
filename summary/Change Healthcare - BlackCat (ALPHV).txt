@@ -1,0 +1,125 @@
+FLOW:
+name: Change Healthcare - BlackCat (ALPHV)
+description: ~190M individuals affected; ~$22M paid; affiliate exit scam; RansomHub re-extortion.
+author: Tyler - individual - tyler@roe-smith.com
+scope: malware
+references:
+  HIPAA Journal - None - https://www.hipaajournal.com/change-healthcare-responding-to-cyberattack
+  BleepingComputer - None - https://www.bleepingcomputer.com/news/security/change-healthcare-hacked-using-stolen-citrix-account-with-no-mfa
+  cybernews - Andrew Wittys' Testimony - https://cybernews.com/news/unitedhealth-hack-exploited-citrix-bug-ceo-testifies-congress/
+  TechCrunch - None - https://techcrunch.com/2025/01/27/how-the-ransomware-attack-at-change-healthcare-went-down-a-timeline
+  Reuters - None - https://www.reuters.com/technology/cybersecurity/unitedhealth-hack-could-take-months-full-recovery-2024-03-08
+  IBM Security - None - https://www.ibm.com/think/news/change-healthcare-22-million-ransomware-payment
+  Wired - None - https://www.wired.com/story/change-healthcare-admits-it-paid-ransomware-hackers
+  KrebsOnSecurity - None - https://krebsonsecurity.com/2024/03/blackcat-ransomware-group-implodes-after-apparent-22m-ransom-payment-by-change-healthcare
+  Barracuda - None - https://blog.barracuda.com/2024/04/12/change-healthcare-and-ransomhub-redefine-double-extortion
+  CPO Magazine - None - https://www.cpomagazine.com/cyber-security/second-cyber-extortion-attack-on-change-healthcare-follows-rumored-22-million-payment-may-involve-former-blackcat-alphv-hackers
+  HIPAA Guide - None - https://www.hipaaguide.net/change-healthcare-data-breach
+  CISA - None - https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-353a
+
+------------------------------------------------------------
+
+Notes:
+     Potential end of attack
+      Potential end of attack: MFA enforcement could have stopped the intrusion. Other methods (phishing, exploitation) remain possible.
+     Widespread Healthcare Disruption
+      Nationwide outages in billing, prescriptions, claims processing from Feb 21. [TechCrunch, AP News]
+     Prolonged Recovery Efforts
+      Recovery expected to take several months to a year. [Reuters]
+     Ransom Paid but Data Not Returned
+      The payment did not restore data or prevent further threats. [IBM]
+     Total Individuals Affected (~192.7 M)
+      Final breach estimate ~192.7 million individuals. [HIPAA Guide Aug 2025]
+
+------------------------------------------------------------
+
+Assets:
+     Citrix Credentials
+          Valid user credentials for Change Healthcare’s remote Citrix access.
+     Access to Citrix Portal
+          Adversaries gain authenticated session into Change Healthcare’s Citrix environment, enabling further intrusion.
+     Environment Map (Network & Accounts)
+          Logical layout of internal systems and account structure built during reconnaissance.
+     Intermediate Access (multiple system credentials)
+          Credentials and access tokens harvested for lateral progression.
+     Domain Administrator Privileges
+          High-level control enabling access to critical systems across the network.
+     Stolen PHI/PII (~6 TB)
+          Bulk exfiltration of sensitive patient/claims data prior to system encryption.
+     Affiliate Hold Victim Data
+          Affiliate retains stolen data despite ransom payments.
+     Ransom Payment (~$22 M in Bitcoin)
+          Approx. $22 million ransom transferred to ALPHV on or around March 3, 2024. Transaction confirmed on-chain. [Wired; KrebsOnSecurity]
+
+------------------------------------------------------------
+
+Actions:
+     Obtain Citrix Credentials
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Acquired valid Citrix credentials by unknown means (purchase or malware). [BleepingComputer]
+     Obtain via Purchase
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+     Obtain via Harvest
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+     Use Citrix credentials to access systems
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Accessed Change Healthcare systems on 2024-02-12 using recovered credentials. [Witty testimony]
+          start: 2024-02-12T00:00:00.000
+     External Reconnaissance (Shodan/Censys scans)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Scanned for exposed Citrix remote-access services, knowing credentials could be leveraged. [BleepingComputer]
+     Internal Reconnaissance (Network/account enumeration)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Attackers spent ~9 days mapping the network and accounts before ransomware deployment. [BlackFog; Ritter Gallagher
+          start: 2024-02-12T00:00:00.000   end: 2024-02-21T00:00:00.000
+     Lateral Movement via RDP, Cobalt Strike, cloud tunnels
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Moved laterally using RDP, remote code execution tools (Cobalt Strike), and tunneled connections across on-prem and Azure. [Barracuda]
+          start: 2024-02-13T00:00:00.000   end: 2024-02-20T00:00:00.000
+     Privilege Escalation to Domain Administrator
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Gained domain admin privileges via credential/token harvesting and possible use of 'aadmin' account or Kerberos forging. [CISA]
+          start: 2024-02-19T00:00:00.000
+     Exfiltrate PHI/PII (~6 TB)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          ALPHV affiliate exfiltrated approximately 6 TB of sensitive healthcare data. [BleepingComputer]
+     Deploy Ransomware Payload (BlackCat/ALPHV)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Encrypted Change Healthcare systems on February 21, disrupting billing/claims. [TechCrunch timeline]
+          start: 2024-02-21T00:00:00.000
+     OCR Investigation Initiated
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          HHS Office for Civil Rights opened probe into patient data exposure. [AP News]
+          start: 2024-03-13T00:00:00.000
+     Class Action Lawsuits Filed
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          At least 6 class-action suits over data breach negligence. [Reuters]
+          start: 2024-03-13T00:00:00.000
+     Pay Ransom (~$22 M)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Change Healthcare (UnitedHealth Group) paid ~$22 M in ransom by early March 2024. [Wired, IBM]
+          start: 2024-03-03T00:00:00.000
+     Affiliate Claims Exit Scam
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Affiliate (‘Notchy’) says ALPHV stole ransom and shut down. [HIPAA Journal, Krebs on Security]
+          start: 2024-03-03T00:00:00.000
+     Re-extortion by RandomHub
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          RansomHub, partnering with Notchy, threatened to leak or sell data. [Barracuda, CPO Magazine]
+          start: 2024-04-12T00:00:00.000
+     Leak Stolen Data Screenshots
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Screenshots of sensitive documents (patient bills, agreements) posted. [BleepingComputer]
+          start: 2024-04-19T00:00:00.000
+     Notification & Credit Monitoring
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Notified impacted individuals, offered credit monitoring, call center active until Aug 26 2025. [HIPAA Guide]
+     Issue Ransom Demand (BlackCat/ALPHV)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          ALPHV issued ransom demands after encryption and data theft, threatening disclosure of PHI. [Reuters; BleepingComputer]
+          start: 2024-02-21T00:00:00.000
+
+------------------------------------------------------------
+
+REMAINDER:
+[]

@@ -1,0 +1,83 @@
+FLOW:
+name: Colonial Pipeline - DarkSide
+description: DarkSide ransomware attack on Colonial Pipeline (May 2021); major U.S. fuel disruption; ransom ~$4.4M paid, partial recovery via DoJ.
+author: Tyler - individual - tyler@roe-smith.com
+scope: malware
+references:
+  CISA/FBI Joint Advisory - None - https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-131a
+  DoJ Seizure Press Release - None - https://www.justice.gov/opa/pr/department-justice-seizes-23-million-cryptocurrency-paid-darkside-ransomware-extortionists
+  Colonial Pipeline CEO Senate Testimony - None - https://www.energy.senate.gov/services/files/9c92f70b-8b87-43ae-8788-cc45667b273a
+  New York Times Reporting - None - https://www.nytimes.com/2021/05/10/business/colonial-pipeline-ransomware.html
+  BBC Coverage - None - https://www.bbc.com/news/business-57050690
+
+------------------------------------------------------------
+
+Empty Notes:
+     Pre-Attack & Initial Access
+     Foothold & Recon
+     Lateral Movement & Privilege Escalation
+     Exfiltration and Ransomware Deployment
+     Impact & Response
+     Post-Attack & Recovery
+
+Notes:
+     Pipeline Shutdown
+      Colonial voluntarily shut down pipeline operations due to IT disruption; 45% of U.S. East Coast fuel supply affected. [BBC, NYT]
+     National Emergency Declaration
+      U.S. government declared emergency to allow fuel transport by road/sea. [BBC]
+     DarkSide Group Collapse
+      DarkSide went offline days after attack; infrastructure seized or shut down. [NYT]
+     Regulatory and Legal Fallout
+      Triggered U.S. review of pipeline cybersecurity standards; Colonial faced lawsuits and regulatory pressure. [NYT, BBC]
+
+------------------------------------------------------------
+
+Assets:
+     Legacy VPN Account Credentials
+          Unused employee VPN account credentials still valid, no MFA enforced. [Colonial Senate Testimony]
+     Stolen Corporate Documents (~100GB)
+          Data included contracts, billing info, and internal documents. [CISA/FBI]
+
+------------------------------------------------------------
+
+Actions:
+     External Reconnaissance (Scanning for VPN access)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          DarkSide affiliates scanned for internet-facing VPN services without MFA. [CISA/FBI]
+     Use Valid Account (VPN Login)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          DarkSide affiliate logged in via legacy VPN with stolen credentials. [CISA/FBI]
+     Establish Persistence & Remote Access
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Attackers maintained remote access via VPN session. [CISA]
+     Internal Reconnaissance
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Enumerated systems, accounts, and storage across Colonial IT network. [CISA/FBI Joint Advisory]
+     Credential Dumping & Privilege Escalation
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Harvested credentials to gain admin access. [CISA/FBI Joint Advisory]
+     Lateral Movement across IT Systems
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Spread through IT systems, including billing and scheduling. [CISA/FBI Joint Advisory]
+     Exfiltrate ~100GB of Corporate Data
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Data exfiltrated to attacker servers prior to encryption. [CISA/FBI]
+     Deploy DarkSide Ransomware Payload
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+     Ransom Demand Issued (DarkSide)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          DarkSide demanded payment to restore access and prevent leaks. [CISA/FBI]
+     Ransom Payment (~$4.4M in Bitcoin)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Colonial Pipeline CEO testified ransom was paid quickly (~May 7, 2021). [Senate Testimony]
+     Partial Restoration of Operations
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Decryption tool provided by DarkSide was slow; Colonial rebuilt systems in parallel. [CISA/FBI Joint Advisory]
+     DoJ Cryptocurrency Seizure (~$2.3M)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          DoJ traced Bitcoin wallet and seized ~63.7 BTC (~$2.3M). [DoJ Press Release]
+
+------------------------------------------------------------
+
+REMAINDER:
+[]

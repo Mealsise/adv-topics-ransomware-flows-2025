@@ -1,0 +1,80 @@
+FLOW:
+name: Royal Mail - LockBit 3.0
+description: January 2023 cyber incident on Royal Mail: printers printed ransom notes, international dispatch halted, negotiation logs leaked, uncertain attribution.
+author: Tyler - individual - tyler@roe-smith.com
+scope: incident
+references:
+  BleepingComputer - LockBit claims cyberattack on Royal Mail; service disruption. - https://www.bleepingcomputer.com/news/security/lockbit-ransomware-gang-claims-royal-mail-cyberattack/
+  EM360 Tech Article - Describes attack, printouts, disruption to international services. - https://em360tech.com/tech-articles/royal-mail-left-powerless-ransomware-attack-strikes-postal-service
+  ITPro - Ransom note leak, LockBit role uncertain. - https://www.itpro.com/security/cyber-attacks/369860/royal-mail-ransom-note-leaked-lockbits-role-remains-uncertain
+  ITPro (negotiation leak) - Negotiation history leaks, ransom ~£65M. - https://www.itpro.com/security/ransomware/370067/lockbit-releases-negotiation-history-royal-mail-ransom-65-million
+  CISA #StopRansomware advisory - 'LockBit 3.0 capabilities, observed TTPs, mitigation guidance. - https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-075a
+  Quorum Cyber report - Technical deep dive: prevalence, distribution vectors, design. - https://www.quorumcyber.com/wp-content/uploads/2023/04/Quorum-Cyber_LockBit-3.0-Malware-Report.pdf
+
+------------------------------------------------------------
+
+Empty Notes:
+     Pre-attack & Initial Access
+     Impact & Response
+     Post-Attack & Recovery
+     Exfiltration & Ransomware Deployment
+     Lateral Movement & Privilege Escalation
+     Foothold & Recon
+
+Notes:
+     Data Leak Publication (44GB archive posted)
+      Actor posts a 44GB compressed data set with manifest; later demand reportedly reduced (~£33M). [ITPro, 2023]
+     Impact - International export disruption
+      Royal Mail halts international dispatch due to severe service disruption. [BleepingComputer, 2023]; [TechMonitor, 2023]
+     DEFENDER ACTION - Engage NCSC/NCA & containment
+      Royal Mail coordinates with UK authorities; isolation and comms measures; advisories shared. [TechMonitor, 2023]
+     Service restoration (phased)
+      Gradual resumption of international services; backlogs cleared over weeks. [BleepingComputer, 2023]
+     Lessons & hardening
+      Access control reviews, segmentation, monitoring as per #StopRansomware LockBit 3.0 guidance. [CISA, 2023]
+
+------------------------------------------------------------
+
+Actions:
+     External Reconnaissance (targeting mail ops / infra)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Actor surveys internet-facing services and remote access to identify entry points. [BleepingComputer, 2023]; [CISA, 2023]
+     Obtain Access Credentials (steal/purchase)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Acquire valid creds for remote services or admin tooling (method not publicly disclosed). [CISA, 2023]
+     Establish Persistence (scheduled tasks / services)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Set scheduled tasks or services to maintain access pre-deployment. [CISA, 2023]; [Quorum Cyber, 2023]
+     Internal Reconnaissance (hosts, shares, printers)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Enumerate endpoints and print infrastructure to plan payload delivery. [Quorum Cyber, 2023]
+     Credential Dumping (LSASS/SAM/tokens)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Dump credentials and tokens from compromised hosts to broaden access. [CISA, 2023]
+     Lateral Movement (remote services / admin tooling)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Move across critical endpoints and print servers. [CISA, 2023]; [Quorum Cyber, 2023]
+     Initial Access (authenticate to remote service with valid account)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Use obtained credentials to log into target environment and establish first foothold. [CISA, 2023]
+     Create/Abuse Accounts (local/domain)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Create or modify local/domain accounts to maintain access and facilitate later stages. [CISA, 2023]
+     Privilege Escalation (admin via reused creds / tokens)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Use harvested/reused credentials or tokens to gain admin on key systems. [CISA, 2023]
+     Data Staging & Exfiltration (business docs)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Stage and exfiltrate sensitive business data to pressure payment (later leak shows 44GB). [ITPro, 2023]
+     Ransomware Deployment (LockBit 3.0) & Printer Note Storm
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Execute payload; ransom notes printed across sites; encryption impacts operations. [TechMonitor, 2023]; [EM360, 2023]
+          start: 2023-01-10T00:00:00.000
+     Ransom Demand & Negotiation (ask ~£65.7M; chat logs)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Actor opens negotiation; later publishes chat log; negotiations span 12 Jan–9 Feb per timestamps. [ITPro, 2023]
+
+------------------------------------------------------------
+
+REMAINDER:
+[]

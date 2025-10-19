@@ -1,0 +1,96 @@
+FLOW:
+name: Kaseya VSA - REvil (Sodinokibi)
+description: MSP supply-chain ransomware via Kaseya VSA on-prem zero-day; mass downstream impact; $70M universal demand; decryptor + prosecutions. [CISA][Kaseya][CSO][Bitdefender][DOJ][Reuters]
+author: Tyler - individual - tyler@roe-smith.com
+scope: incident
+references:
+  CISA - Explains the VSA vulnerability exploit, recommends shutdown of SaaS & on-prem servers, patches. - https://www.cisa.gov/news-events/news/kaseya-ransomware-attack-guidance-affected-msps-and-their-customers
+  Department of Justice - Charges Yaroslav Vasinskyi for deploying REvil ransomware via Kaseya. Covers extradition of Vasinskyi and related legal steps. - https://www.justice.gov/archives/opa/pr/ukrainian-arrested-and-charged-ransomware-attack-kaseya https://www.justice.gov/opa/pr/sodinokibirevil-ransomware-defendant-extradited-united-states-and-arraigned-texas
+  Australian Cyber Center / ACSC Alert - Describes supply-chain angle and CVE exploited (CVE-2021-30116). - https://www.cyber.gov.au/about-us/alerts/kaseya-vsa-supply-chain-ransomware-attack
+  Bleeping Computer - Reports 13y7m sentence, $16M restitution. - https://www.bleepingcomputer.com/news/security/revil-hacker-behind-kaseya-ransomware-attack-gets-13-years-in-prison/
+  MSSP Alert - FBI held decryption key ~3 weeks before sharing with victims. - https://www.msspalert.com/news/fbi-withheld-revil-ransomware-decryptor-key-as-some-msps-suffered-encryption
+  Wikipedia - Well-cited. Zero-day exploit, universal decryptor demand, infrastructure take down. - https://en.wikipedia.org/wiki/Kaseya_VSA_ransomware_attack?utm_source=chatgpt.com
+
+------------------------------------------------------------
+
+Empty Notes:
+     Foothold & Recon
+     Lateral Movement & Privilege Escalation
+     Pre-attack & Initial Access
+     Exfiltration & Ransomware Deployment
+     Impact & Response
+     Post-Attack & Recovery
+
+Notes:
+     Widespread Impact / Service Disruption
+      Over 1,000 downstream organizations impacted; many systems encrypted, operations disrupted. [Wikipedia][CSO]
+     REvil / Infrastructure Disruption
+      REvil’s infrastructure dismantled, group inactive afterward. [Wikipedia]
+     Universal Decryptor Release Timing
+      Key withheld until ~July 21, 2021. [Wikipedia] 2+ weeks after attack. Despite being obtained by the FBI earlier.
+     Congressional Scrutiny
+      Congress demanded FBI explain delay in key release. [Bleeping Computer] FBI claimed it delayed release to test the key and coordinate with agencies. [Cybersecurity Dive]
+
+------------------------------------------------------------
+
+Assets:
+     Internet-facing VSA (exposed server)
+          A Kaseya VSA server exposed to internet, accepting connections (UI, APIs)
+     agent.crt, agent.exe, REvil binary (mpsvc.dll)
+          agent.crt is base64 encoded payload; decoded to agent.exe via certutil; side-loaded msmpeng + mpsvc.dll (REvil). [Zscaler]
+
+------------------------------------------------------------
+
+Actions:
+     External Reconnaissance (scan for exposed VSA endpoints)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Attackers scanned public IP ranges looking for on-premise Kaseya VSA servers (ports, UI endpoints) to identify vulnerable targets. [CISA]
+     Exploit Authentication Bypass (CVE-2021-30116)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Using CVE-2021-30116, the actor bypassed authentication checks (via web interface flaws) to gain elevated access. [CyberNews][UpGuard]
+     Upload Malicious Update Package / SQL Upload
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          The attacker submitted a crafted “update” or script (via POST / KUpload.dll, etc.) to the VSA server, effectively tampering with its management pipeline. [Kaseya Incident Details][Zscaler]
+     Establish Persistence in VSA Admin / backdoor
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          The attacker embedded scripts or backdoor modules in the VSA management console so that subsequent operations (pushing scripts to clients) are possible.
+     Push Malicious Scripts (via VSA agent tasks) to MSP Clients
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          The VSA sends a script to its managed endpoints (MSP clients) as though it's a legitimate update task. That script includes logic to deliver REvil components. [Zscaler][CyberNews]
+     Enumerate Client / MSP Tenant Network
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          After script delivery, the actor enumerates systems, shares, accounts, service hosts across the client network to map attack paths.
+     Credential Dumping in Tenant Environment
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          On compromised endpoints, the attacker extracts credentials (LSASS, SAM, etc.) to escalate privileges or impersonate accounts.
+     Lateral Movement via VSA agent / RMM channel
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Using the VSA agent channel or credentials gained, the attacker moves laterally - to file servers, domain controllers, etc.
+     Data Exfiltration
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Sensitive files or databases are siphoned off to attacker-controlled servers before encryption (observed in some reports). [CSO]
+     Deploy REvil Ransomware via Agent Payload
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          The malicious update executes a PowerShell or drop agent.exe (decoded from agent.crt), side-loads into MsMpEng.exe, and decrypts files using REvil’s crypto. [Zscaler][CyberNews]
+          start: 2021-07-02T00:00:00.000
+     Issue Ransom Demand / Note
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Attackers demand $70M for a universal decryptor, or per-victim demands. REvil threatens leak or refusal otherwise. [Wikipedia][Reuters]
+          start: 2021-07-05T00:00:00.000
+     Vendor / Government Advisory / Shutdown
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Kaseya ordered shutdown of VSA servers; CISA/FBI released guidance; MSPs forced to patch or recover. [CISA]
+          start: 2021-07-02T00:00:00.000
+     Release Universal Decryptor / Keys
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Kaseya & security teams facilitate a universal decryption key to recover many victims. [NCSC PDF][Kaseya]
+          start: 2021-07-21T00:00:00.000
+     DOJ / Law Enforcement Arrests & Prosecution
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Yaroslav Vasinskyi extradited, tried, and sentenced to ~13 years, ordered restitution >$16M. [Reuters]
+          start: 2024-05-01T00:00:00.000
+
+------------------------------------------------------------
+
+REMAINDER:
+[]

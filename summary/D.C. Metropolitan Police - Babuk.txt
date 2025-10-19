@@ -1,0 +1,88 @@
+FLOW:
+name: D.C. Metropolitan Police - Babuk
+description: April–May 2021 ransomware + data-theft at MPD. ~250 GB exfiltrated, personal/officer files leaked, ~$4M demand, negotiations failed.
+author: Tyler - individual - tyler@roe-smith.com
+scope: incident
+references:
+  BankInfoSecurity - Initial confirmation of MPD attack; Babuk claim. - https://www.bankinfosecurity.com/dc-metropolitan-police-hit-cyberattack-a-16474
+  StateScoop (leak announcement) - Babuk posts MPD data; ~250 GB claimed. - https://statescoop.com/ransomware-dc-police-babuk/
+  StateScoop (personnel files) - Leak of 22 officers’ detailed personnel files; escalation. - https://statescoop.com/ransomware-actors-publish-personnel-files-of-d-c-police-officers/
+  DataBreachToday - Further dumps + negotiation excerpts. - https://www.databreachtoday.com/babuk-ransomware-gang-posts-more-dc-metro-police-data-a-16575
+  WUSA9 - Reports ~$4M ransom demand on dark web. - https://www.wusa9.com/article/news/local/dc/russian-hackers-dc-police-4-million-ransom-demand-dark-web-babuk/65-cd458037-31d5-4d63-bc22-4c56398885b8
+  Cybersecurity Clinics (Case Study) - Concise case overview; ransom, leak timeline. - https://cybersecurityclinics.org/blog/resources/case-study-washington-d-c-cyberattack/
+  SysCon’22 paper (PDF) - Academic analysis including MPD Babuk incident. - https://sbhunia.me/publications/manuscripts/syscon22.pdf
+  Forbes - Post-negotiation leak claims; 250GB detail. - https://www.forbes.com/sites/thomasbrewster/2021/05/13/ransomware-hackers-claim-to-leak-250gb-of-washington-dc-police-data-after-cops-dont-pay-4-million-ransom/
+
+------------------------------------------------------------
+
+Empty Notes:
+     Foothold & Recon
+     Pre-attack & Initial Access
+     Lateral Movement & Privilege Escalation
+     Exfiltration & Ransomware Deployment
+     Post-Attack & Recovery
+     Impact & Response
+
+Notes:
+     Unclear exact vector
+      Public sources do not confirm exact entry (could be creds reuse or exploit). [SysCon’22, 2022]
+     Segmentation gaps
+      Breadth of access indicates weak segmentation. [StateScoop, 2021]
+     Leak timeline
+      Initial claims late April, escalated leaks into May. [Forbes, 2021]; [DataBreachToday, 2021]
+     Impact - Exposure & Coercion
+      Sensitive MPD officer and case files exposed, creating safety/privacy risks. [StateScoop, 2021]; [Forbes, 2021]
+     DEFENDER ACTION - Incident Response
+      IR with federal partners, internal response coordination. [Cybersecurity Clinics, 2023]
+     DEFENDER ACTION - Negotiation stance
+      Negotiations failed; no ransom payment confirmed. [DataBreachToday, 2021]
+     Post-incident Hardening
+      Password resets, segmentation improvements after breach. [Cybersecurity Clinics, 2023]
+     Continued Leak Pressure
+      Babuk and mirrors continued teasing data post-negotiation. [Forbes, 2021]
+     Legal/Privacy Follow-up
+      Possible lawsuits and reviews triggered by exposure. [Cybersecurity Clinics, 2023]
+
+------------------------------------------------------------
+
+Actions:
+     External Reconnaissance (police-facing portals, VPN, email)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Babuk scouts MPD’s internet-facing services and attack surface. [BankInfoSecurity, 2021]; [Cybersecurity Clinics, 2023]
+     Initial Access (valid creds / web entry)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Actor gains foothold using valid credentials or abused web entry. [BankInfoSecurity, 2021]; [DataBreachToday, 2021]
+     Establish Persistence (scheduled tasks / remote tooling)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Persistence ensured through recurring tasks or remote tooling. [SysCon’22, 2022]
+     Internal Reconnaissance (domains, groups, shares)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Mapping network and shares to plan exfiltration. [Cybersecurity Clinics, 2023]
+     Credential Access (dump hashes / tokens)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Harvested credentials/tokens from compromised hosts. [Cybersecurity Clinics, 2023]
+     Lateral Movement (RDP / SMB / remote services)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Used remote services to spread to file servers and personnel systems. [Cybersecurity Clinics, 2023]
+     Privilege Escalation (domain / key repos)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Escalated to domain-level or privileged accounts. [Cybersecurity Clinics, 2023]
+     Data Staging & Exfiltration (~250 GB)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Exfiltrated ~250 GB of officer and case data. [StateScoop, 2021]; [Forbes, 2021]
+     Ransom Demand (~$4M)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Demanded ~$4M ransom with threats of disclosure. [WUSA9, 2021]
+          start: 2021-04-28T00:00:00.000
+     Proof-of-Life Leak (samples)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Posted sample data to prove access and pressure defenders. [DataBreachToday, 2021]; [StateScoop, 2021]
+     Broader Leak: Personnel Files
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Published detailed personnel files of 22 officers. [StateScoop, 2021]
+          start: 2021-05-11T00:00:00.000
+
+------------------------------------------------------------
+
+REMAINDER:
+[]

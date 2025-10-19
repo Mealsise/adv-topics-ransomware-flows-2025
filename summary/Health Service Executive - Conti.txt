@@ -1,0 +1,86 @@
+FLOW:
+name: Health Service Executive - Conti
+description: Major Irish health service ransomware attack; all IT systems shut down; data exfiltrated; no ransom paid; mass legal & system impact.
+author: Tyler - individual - tyler@roe-smith.com
+scope: malware
+references:
+  PwC Independent Post Incident Review (HSE full report, Dec 2021) - Phishing, timeline, impact, recovery, systems taken down. - https://www.hse.ie/eng/services/publications/conti-cyber-attack-on-the-hse-full-report.pdf
+  “Inside Ireland’s Public Healthcare Ransomware Scare” (KrebsOnSecurity) - Initial infection date, vulnerable Excel, warning signs. - https://krebsonsecurity.com/2021/12/inside-irelands-public-healthcare-ransomware-scare
+  HC3: Lessons Learned from the Ransomware Attack on Ireland’s HSE - Exfiltration size, impacted systems etc. - https://www.hipaajournal.com/hc3-lessons-learned-from-the-ransomware-attack-on-irelands-health-service-executive/
+  HSE “What happened / Cyber-attack and HSE response” page - Phishing vector, lack of ransom paid, notification and legal measures. - https://www2.hse.ie/services/cyber-attack/what-happened/
+  NCSC:IE / ENISA reports “Recovery Aftermath” etc. - System isolation, containment, service disruption. - https://www.enisa.europa.eu/sites/default/files/all_files/10.%20A%20major%20incident%20-%20the%20recovery%2C%20impact%20and%20aftermath_IR.pdf
+  RTÉ News & others for legal proceedings / cost / notifications - Number of lawsuits, cost to HSE. - https://www.rte.ie/news/ireland/2024/0514/1448972-hse-cyber/
+
+------------------------------------------------------------
+
+Empty Notes:
+     Pre-attack & Initial Access
+     Establish Foothold & Recon
+     Lateral Movement & Privilege Escalation
+     Exfiltration & Encryption
+     Impact & Response
+     Post-Attack & Legal
+
+Notes:
+     Widespread Disruption
+      80%+ IT environment encrypted; hospitals reverted to paper; diagnostics and appointments cancelled. [HSE Official Page]
+     No Ransom Paid
+      Irish government/HSE refused to pay ransom; recovery pursued independently. [HSE Official Page]
+     Financial & Legal Impact
+      Cost > €100M, lawsuits and compensation claims ongoing. [RTÉ News]
+
+------------------------------------------------------------
+
+Assets:
+     Compromised Workstation (Patient Zero)
+          Employee workstation infected after Excel opened.
+     Stolen Patient/Staff Records
+          Data set exfiltrated by Conti operators.
+
+------------------------------------------------------------
+
+Actions:
+     External Reconnaissance (search for exposed services)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Adversaries scanned for exposed RDP/VPN/email gateways to identify entry points. [PwC Independent Review]
+     Send Phishing Email with Malicious Excel
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Phishing email delivered to HSE employee containing Excel macro. [KrebsOnSecurity]
+     User Opens Malicious Excel (Macro Execution)
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Macro enabled, dropped loader/backdoor. [KrebsOnSecurity]
+     Deploy Backdoor & Maintain Persistence
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Conti actors installed backdoor for remote control [PwC Independent Review]
+     Internal Reconnaissance & Credential Dumping
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Mapped domains, accounts, harvested credentials over ~8 weeks. [PwC Independent Review]
+     Lateral Movement across HSE network
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Spread across servers & workstations using RDP and other tools. [PwC Independent Review]
+     Privilege Escalation to Domain Admin
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Achieved domain admin privileges, widespread control. [PwC Independent Review]
+     Exfiltrate Patient & Staff Data
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Sensitive medical & staff records copied prior to encryption. [HIPAA Journal]
+     Deploy Conti Ransomware Payload
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          On 14 May 2021, ransomware encrypted majority of HSE systems. [HSE Official Page]
+     HSE Shuts Down All IT Systems
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          To contain spread, HSE disconnected National Healthcare Network. [ENISA Report]
+     Ransom Demand Issued
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Conti demanded payment, threatened to leak data. [PwC Independent Review]
+     Legal Injunctions Against Data Sharing
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          High Court injunctions to prevent media/actors from publishing leaked data. [RTÉ News]
+     Recovery & System Rebuild
+          TACT/TECH: NONE GIVEN / NONE GIVEN
+          Gradual recovery over months; re-imaging thousands of endpoints. [PwC Independent Review]
+
+------------------------------------------------------------
+
+REMAINDER:
+[]
