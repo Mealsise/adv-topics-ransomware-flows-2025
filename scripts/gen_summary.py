@@ -145,23 +145,38 @@ def extract_actions(objects: List[Dict[str, Any]]) -> Tuple[List[Dict[str, str]]
     for obj in objects:
         if obj.get("id") != "action":
             remainder.append(obj); continue
+
         props = listprops_to_dict(obj.get("properties", []))
         name = props.get("name", "")
-        ttp = props.get("ttp", [])
-        tactic = technique = ""
-        if isinstance(ttp, list) and all(isinstance(x, list) and len(x) == 2 for x in ttp):
-            d = {k: v for k, v in ttp}
-            tactic, technique = d.get("tactic", ""), d.get("technique", "")
         desc = props.get("description", "")
+
+        # ttp can be dict (after collapse) or list-of-pairs
+        tactic = technique = ""
+        ttp = props.get("ttp", [])
+        if isinstance(ttp, dict):
+            tactic = ttp.get("tactic", "")
+            technique = ttp.get("technique", "")
+        elif isinstance(ttp, list) and all(isinstance(x, list) and len(x) == 2 for x in ttp):
+            d = {k: v for k, v in ttp}
+            tactic = d.get("tactic", "")
+            technique = d.get("technique", "")
+
+        def strip_tz(dt: Optional[str]) -> str:
+            if not dt: return ""
+            return re.sub(r"(Z|[+-]\d{2}:\d{2})$", "", dt)
+
         def get_time(val: Any) -> str:
             if isinstance(val, dict): return strip_tz(val.get("time"))
             if isinstance(val, str):  return strip_tz(val)
             return ""
+
         start = get_time(props.get("execution_start"))
         end   = get_time(props.get("execution_end"))
+
         if COLLAPSE_WHITESPACE_ACTIONS:
             name = collapse_ws(name); desc = collapse_ws(desc)
             tactic = collapse_ws(tactic); technique = collapse_ws(technique)
+
         actions.append({
             "name": name or "",
             "tactic": tactic or "NONE GIVEN",

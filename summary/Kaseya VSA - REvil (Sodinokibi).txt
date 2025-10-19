@@ -43,38 +43,38 @@ Assets:
 
 Actions:
      External Reconnaissance (scan for exposed VSA endpoints)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0043 / T1595
           Attackers scanned public IP ranges looking for on-premise Kaseya VSA servers (ports, UI endpoints) to identify vulnerable targets. [CISA]
      Exploit Authentication Bypass (CVE-2021-30116)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0001 / T1190
           Using CVE-2021-30116, the actor bypassed authentication checks (via web interface flaws) to gain elevated access. [CyberNews][UpGuard]
      Upload Malicious Update Package / SQL Upload
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0001 / T1190
           The attacker submitted a crafted “update” or script (via POST / KUpload.dll, etc.) to the VSA server, effectively tampering with its management pipeline. [Kaseya Incident Details][Zscaler]
      Establish Persistence in VSA Admin / backdoor
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0003 / T1133
           The attacker embedded scripts or backdoor modules in the VSA management console so that subsequent operations (pushing scripts to clients) are possible.
      Push Malicious Scripts (via VSA agent tasks) to MSP Clients
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0002 / T1059
           The VSA sends a script to its managed endpoints (MSP clients) as though it's a legitimate update task. That script includes logic to deliver REvil components. [Zscaler][CyberNews]
      Enumerate Client / MSP Tenant Network
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0007 / T1018
           After script delivery, the actor enumerates systems, shares, accounts, service hosts across the client network to map attack paths.
      Credential Dumping in Tenant Environment
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0006 / T1003
           On compromised endpoints, the attacker extracts credentials (LSASS, SAM, etc.) to escalate privileges or impersonate accounts.
      Lateral Movement via VSA agent / RMM channel
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0008 / T1021
           Using the VSA agent channel or credentials gained, the attacker moves laterally - to file servers, domain controllers, etc.
      Data Exfiltration
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0010 / T1041
           Sensitive files or databases are siphoned off to attacker-controlled servers before encryption (observed in some reports). [CSO]
      Deploy REvil Ransomware via Agent Payload
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0040 / T1486
           The malicious update executes a PowerShell or drop agent.exe (decoded from agent.crt), side-loads into MsMpEng.exe, and decrypts files using REvil’s crypto. [Zscaler][CyberNews]
           start: 2021-07-02T00:00:00.000
      Issue Ransom Demand / Note
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0040 / T1657
           Attackers demand $70M for a universal decryptor, or per-victim demands. REvil threatens leak or refusal otherwise. [Wikipedia][Reuters]
           start: 2021-07-05T00:00:00.000
      Vendor / Government Advisory / Shutdown

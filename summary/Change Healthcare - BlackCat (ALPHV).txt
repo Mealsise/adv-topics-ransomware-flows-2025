@@ -55,36 +55,36 @@ Assets:
 
 Actions:
      Obtain Citrix Credentials
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0006 / T1078.002
           Acquired valid Citrix credentials by unknown means (purchase or malware). [BleepingComputer]
      Obtain via Purchase
           TACT/TECH: NONE GIVEN / NONE GIVEN
      Obtain via Harvest
           TACT/TECH: NONE GIVEN / NONE GIVEN
      Use Citrix credentials to access systems
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0001 / T1078
           Accessed Change Healthcare systems on 2024-02-12 using recovered credentials. [Witty testimony]
           start: 2024-02-12T00:00:00.000
      External Reconnaissance (Shodan/Censys scans)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0043 / T1595
           Scanned for exposed Citrix remote-access services, knowing credentials could be leveraged. [BleepingComputer]
      Internal Reconnaissance (Network/account enumeration)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0007 / T1082
           Attackers spent ~9 days mapping the network and accounts before ransomware deployment. [BlackFog; Ritter Gallagher
           start: 2024-02-12T00:00:00.000   end: 2024-02-21T00:00:00.000
      Lateral Movement via RDP, Cobalt Strike, cloud tunnels
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0008 / T1021
           Moved laterally using RDP, remote code execution tools (Cobalt Strike), and tunneled connections across on-prem and Azure. [Barracuda]
           start: 2024-02-13T00:00:00.000   end: 2024-02-20T00:00:00.000
      Privilege Escalation to Domain Administrator
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0006 / T1055
           Gained domain admin privileges via credential/token harvesting and possible use of 'aadmin' account or Kerberos forging. [CISA]
           start: 2024-02-19T00:00:00.000
      Exfiltrate PHI/PII (~6 TB)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0010 / T1041
           ALPHV affiliate exfiltrated approximately 6 TB of sensitive healthcare data. [BleepingComputer]
      Deploy Ransomware Payload (BlackCat/ALPHV)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0040 / T1486
           Encrypted Change Healthcare systems on February 21, disrupting billing/claims. [TechCrunch timeline]
           start: 2024-02-21T00:00:00.000
      OCR Investigation Initiated
@@ -115,7 +115,7 @@ Actions:
           TACT/TECH: NONE GIVEN / NONE GIVEN
           Notified impacted individuals, offered credit monitoring, call center active until Aug 26 2025. [HIPAA Guide]
      Issue Ransom Demand (BlackCat/ALPHV)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0040 / T1657
           ALPHV issued ransom demands after encryption and data theft, threatening disclosure of PHI. [Reuters; BleepingComputer]
           start: 2024-02-21T00:00:00.000
 

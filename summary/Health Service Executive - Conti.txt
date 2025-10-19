@@ -41,37 +41,37 @@ Assets:
 
 Actions:
      External Reconnaissance (search for exposed services)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0043 / T1595
           Adversaries scanned for exposed RDP/VPN/email gateways to identify entry points. [PwC Independent Review]
      Send Phishing Email with Malicious Excel
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0001 / T1566
           Phishing email delivered to HSE employee containing Excel macro. [KrebsOnSecurity]
      User Opens Malicious Excel (Macro Execution)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0002 / T1204.002
           Macro enabled, dropped loader/backdoor. [KrebsOnSecurity]
      Deploy Backdoor & Maintain Persistence
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0003 / T1053
           Conti actors installed backdoor for remote control [PwC Independent Review]
      Internal Reconnaissance & Credential Dumping
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0007 / T1082
           Mapped domains, accounts, harvested credentials over ~8 weeks. [PwC Independent Review]
      Lateral Movement across HSE network
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0008 / T1021
           Spread across servers & workstations using RDP and other tools. [PwC Independent Review]
      Privilege Escalation to Domain Admin
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0006 / T1078
           Achieved domain admin privileges, widespread control. [PwC Independent Review]
      Exfiltrate Patient & Staff Data
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0010 / T1041
           Sensitive medical & staff records copied prior to encryption. [HIPAA Journal]
      Deploy Conti Ransomware Payload
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0040 / T1486
           On 14 May 2021, ransomware encrypted majority of HSE systems. [HSE Official Page]
      HSE Shuts Down All IT Systems
           TACT/TECH: NONE GIVEN / NONE GIVEN
           To contain spread, HSE disconnected National Healthcare Network. [ENISA Report]
      Ransom Demand Issued
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0040 / T1657
           Conti demanded payment, threatened to leak data. [PwC Independent Review]
      Legal Injunctions Against Data Sharing
           TACT/TECH: NONE GIVEN / NONE GIVEN

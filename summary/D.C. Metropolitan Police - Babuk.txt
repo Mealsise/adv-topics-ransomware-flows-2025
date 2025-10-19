@@ -47,38 +47,38 @@ Notes:
 
 Actions:
      External Reconnaissance (police-facing portals, VPN, email)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0043 / T1595
           Babuk scouts MPD’s internet-facing services and attack surface. [BankInfoSecurity, 2021]; [Cybersecurity Clinics, 2023]
      Initial Access (valid creds / web entry)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0001 / T1078
           Actor gains foothold using valid credentials or abused web entry. [BankInfoSecurity, 2021]; [DataBreachToday, 2021]
      Establish Persistence (scheduled tasks / remote tooling)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0003 / T1053
           Persistence ensured through recurring tasks or remote tooling. [SysCon’22, 2022]
      Internal Reconnaissance (domains, groups, shares)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0007 / T1018
           Mapping network and shares to plan exfiltration. [Cybersecurity Clinics, 2023]
      Credential Access (dump hashes / tokens)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0006 / T1003
           Harvested credentials/tokens from compromised hosts. [Cybersecurity Clinics, 2023]
      Lateral Movement (RDP / SMB / remote services)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0008 / T1021
           Used remote services to spread to file servers and personnel systems. [Cybersecurity Clinics, 2023]
      Privilege Escalation (domain / key repos)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0006 / T1078
           Escalated to domain-level or privileged accounts. [Cybersecurity Clinics, 2023]
      Data Staging & Exfiltration (~250 GB)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0010 / T1041
           Exfiltrated ~250 GB of officer and case data. [StateScoop, 2021]; [Forbes, 2021]
      Ransom Demand (~$4M)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0040 / T1657
           Demanded ~$4M ransom with threats of disclosure. [WUSA9, 2021]
           start: 2021-04-28T00:00:00.000
      Proof-of-Life Leak (samples)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0040 / T1657
           Posted sample data to prove access and pressure defenders. [DataBreachToday, 2021]; [StateScoop, 2021]
      Broader Leak: Personnel Files
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0040 / T1657
           Published detailed personnel files of 22 officers. [StateScoop, 2021]
           start: 2021-05-11T00:00:00.000
 

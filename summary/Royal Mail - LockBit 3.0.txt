@@ -37,41 +37,41 @@ Notes:
 
 Actions:
      External Reconnaissance (targeting mail ops / infra)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0043 / T1595
           Actor surveys internet-facing services and remote access to identify entry points. [BleepingComputer, 2023]; [CISA, 2023]
      Obtain Access Credentials (steal/purchase)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0006 / T1555
           Acquire valid creds for remote services or admin tooling (method not publicly disclosed). [CISA, 2023]
      Establish Persistence (scheduled tasks / services)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0003 / T1053
           Set scheduled tasks or services to maintain access pre-deployment. [CISA, 2023]; [Quorum Cyber, 2023]
      Internal Reconnaissance (hosts, shares, printers)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0007 / T1018
           Enumerate endpoints and print infrastructure to plan payload delivery. [Quorum Cyber, 2023]
      Credential Dumping (LSASS/SAM/tokens)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0006 / T1003
           Dump credentials and tokens from compromised hosts to broaden access. [CISA, 2023]
      Lateral Movement (remote services / admin tooling)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0008 / T1021
           Move across critical endpoints and print servers. [CISA, 2023]; [Quorum Cyber, 2023]
      Initial Access (authenticate to remote service with valid account)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0001 / T1078
           Use obtained credentials to log into target environment and establish first foothold. [CISA, 2023]
      Create/Abuse Accounts (local/domain)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0003 / T1098
           Create or modify local/domain accounts to maintain access and facilitate later stages. [CISA, 2023]
      Privilege Escalation (admin via reused creds / tokens)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0107 / T1078
           Use harvested/reused credentials or tokens to gain admin on key systems. [CISA, 2023]
      Data Staging & Exfiltration (business docs)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0010 / T1041
           Stage and exfiltrate sensitive business data to pressure payment (later leak shows 44GB). [ITPro, 2023]
      Ransomware Deployment (LockBit 3.0) & Printer Note Storm
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0040 / T1486
           Execute payload; ransom notes printed across sites; encryption impacts operations. [TechMonitor, 2023]; [EM360, 2023]
           start: 2023-01-10T00:00:00.000
      Ransom Demand & Negotiation (ask ~£65.7M; chat logs)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0040 / T1657
           Actor opens negotiation; later publishes chat log; negotiations span 12 Jan–9 Feb per timestamps. [ITPro, 2023]
 
 ------------------------------------------------------------
