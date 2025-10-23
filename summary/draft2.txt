@@ -1,0 +1,81 @@
+FLOW:
+name: ExecuPharm – Clop (2020) [Accellion FTA supply-chain]
+description: 2020 Accellion FTA supply-chain compromises; Clop data theft and public leaks; pharma downstream exposure.
+author: Tyler - individual - tyler@roe-smith.com
+scope: malware / supply-chain
+references:
+  HHS Accellion Analyst Note - Accellion timeline & vulnerabilities. - https://www.hhs.gov/sites/default/files/accellion-analyst-note.pdf
+  BleepingComputer - Global Accellion breaches linked to Clop. - https://www.bleepingcomputer.com/news/security/global-accellion-data-breaches-linked-to-clop-ransomware-gang/
+  SentinelOne - Clop analysis & DEWMODE web shell. - https://www.sentinelone.com/anthology/clop/
+  Infosecurity - ExecuPharm disclosure coverage. - https://www.infosecurity-magazine.com/news/execupharm-suffers-data/
+------------------------------------------------------------
+Pre-attack & Initial Access
+  Vendor reconnaissance (scan FTA endpoints)
+    TACT/TECH: TA0043 / T1595
+    Desc: Scan for internet-facing Accellion FTA instances and versions.
+    start: 2020-12-01T12:00:00.000+10:30
+    parents: []
+  Initial App Exploit (Accellion FTA zero-day)
+    TACT/TECH: TA0001 / T1190
+    Desc: Exploit Accellion FTA webapp (zero-days) to access file stores.
+    start: 2020-12-15T12:00:00.000+10:30
+    parents: Vendor reconnaissance (scan FTA endpoints)
+
+Foothold & Recon
+  Web shell / backdoor implantation (DEWMODE)
+    TACT/TECH: TA0003 / T1133
+    Desc: Deploy web shell to retain access in vendor-hosted FTA.
+    start: 2020-12-15T18:00:00.000+10:30
+    parents: Initial App Exploit (Accellion FTA zero-day)
+  Map victim file stores & partner manifests
+    TACT/TECH: TA0007 / T1018
+    Desc: Enumerate customer folders, partner manifests, sensitive datasets.
+    start: 2020-12-16T10:00:00.000+10:30
+    parents: Web shell / backdoor implantation (DEWMODE)
+
+Lateral Movement & Privilege Escalation
+  Pivot to corporate networks via supplier portals
+    TACT/TECH: TA0008 / T1021
+    Desc: Use supplier access to reach corporate hosts or credentials.
+    start: 2020-12-17T12:00:00.000+10:30
+    parents: Map victim file stores & partner manifests
+  Credential harvesting for downstream systems
+    TACT/TECH: TA0006 / T1003
+    Desc: Extract credentials from stored files or transferred manifests.
+    start: 2020-12-17T15:00:00.000+10:30
+    parents: Pivot to corporate networks via supplier portals
+
+Exfiltration & Leak/Extortion
+  Data Staging & Mass Exfiltration (sensitive PHI/PII/contracts)
+    TACT/TECH: TA0010 / T1041
+    Desc: Bulk exfil of pharma research, contracts, and PII to attacker servers.
+    start: 2020-12-18T08:00:00.000+10:30
+    parents: Credential harvesting for downstream systems
+  Publish on Clop leak site / extortion notices
+    TACT/TECH: TA0040 / T1657
+    Desc: Post stolen files; demand ransom; pressure victims publicly.
+    start: 2020-12-20T12:00:00.000+10:30
+    parents: Data Staging & Mass Exfiltration (sensitive PHI/PII/contracts)
+
+Impact & Response
+  NOTE — DEFENDER ACTION: Vendor advisory & patches
+    Desc: Vendor patches Accellion, notifies customers; mitigations advised.
+    start: 2020-12-20T12:00:00.000+10:30
+    parents: Initial App Exploit (Accellion FTA zero-day)
+  NOTE — DEFENDER ACTION: Customer notification & legal follow-up
+    Desc: Affected partners notified; regulatory reports and possible litigation.
+    start: 2020-12-30T12:00:00.000+10:30
+    parents: Publish on Clop leak site / extortion notices
+
+Post-Attack & Recovery
+  Remediation & decommission of legacy FTA
+    Desc: Retire Accellion FTA, migrate to modern solutions; patching.
+    start: 2021-01-15T12:00:00.000+10:30
+    parents: NOTE — DEFENDER ACTION: Vendor advisory & patches
+  Long-tail reputational & contractual impact
+    Desc: Contracts, supplier audits, and ongoing due-diligence reviews.
+    start: 2021-03-01T12:00:00.000+10:30
+    parents: NOTE — DEFENDER ACTION: Customer notification & legal follow-up
+
+REMAINDER:
+[]

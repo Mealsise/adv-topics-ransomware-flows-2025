@@ -1,0 +1,81 @@
+FLOW:
+name: CNA Financial – Phoenix CryptoLocker (Evil Corp-linked) (Mar 2021)
+description: March 2021 ransomware at CNA; fake browser-update social engineering → remote compromise → Phoenix CryptoLocker; OFAC/sanctions payment context complicates response.
+author: Tyler - individual - tyler@roe-smith.com
+scope: incident
+references:
+  Malwarebytes - CNA legal filings & timeline. - https://www.malwarebytes.com/blog/news/2021/07/cna-legal-filings-lift-the-curtain-on-a-phoenix-cryptolocker-ransomware-attack
+  BleepingComputer - CNA breached via fake browser update. - https://www.bleepingcomputer.com/news/security/ransomware-gang-breached-cnas-network-via-fake-browser-update/
+  UpGuard - CNA timeline & customer count notified. - https://www.upguard.com/news/cna-ransomware-attack
+  Cybersecurity Dive - OFAC/sanctions payment context. - https://www.cybersecuritydive.com/news/cna-financial-ransomware-payment-treasury-sanctions/600591/
+------------------------------------------------------------
+Pre-attack & Initial Access
+  Recon & lure creation (targeting remote staff)
+    TACT/TECH: TA0043 / T1595
+    Desc: Prepare fake browser-update lures for remote workers.
+    start: 2021-03-01T12:00:00.000+10:30
+    parents: []
+  Social-engineer install (fake browser update)
+    TACT/TECH: TA0001 / T1204
+    Desc: Victim installs fake update; malware executed locally.
+    start: 2021-03-05T12:00:00.000+10:30
+    parents: Recon & lure creation (targeting remote staff)
+
+Foothold & Recon
+  Remote code exec & backdoor install
+    TACT/TECH: TA0001 / T1059
+    Desc: Backdoor provides persistent remote shells on endpoints.
+    start: 2021-03-05T12:30:00.000+10:30
+    parents: Social-engineer install (fake browser update)
+  Internal discovery (VPN, shares, AD)
+    TACT/TECH: TA0007 / T1018
+    Desc: Enumerate VPN, file shares, AD objects for targets.
+    start: 2021-03-07T12:00:00.000+10:30
+    parents: Remote code exec & backdoor install
+
+Lateral Movement & Privilege Escalation
+  Credential Harvesting & VPN compromise
+    TACT/TECH: TA0006 / T1078
+    Desc: Harvested creds used to access VPN and escalate.
+    start: 2021-03-07T12:00:00.000+10:30
+    parents: Internal discovery (VPN, shares, AD)
+  Lateral movement to domain controllers / cores
+    TACT/TECH: TA0008 / T1021
+    Desc: Spread to key servers; prep for encryption.
+    start: 2021-03-10T12:00:00.000+10:30
+    parents: Credential Harvesting & VPN compromise
+
+Exfiltration & Ransomware Deployment
+  Data staging & exfiltration (customer records)
+    TACT/TECH: TA0010 / T1041
+    Desc: Copy customer data before encryption (noted in filings).
+    start: 2021-03-12T12:00:00.000+10:30
+    parents: Lateral movement to domain controllers / cores
+  Deploy Phoenix CryptoLocker (mass encryption)
+    TACT/TECH: TA0040 / T1486
+    Desc: Phoenix CryptoLocker runs across endpoints; service disruption.
+    start: 2021-03-21T12:00:00.000+10:30
+    parents: Data staging & exfiltration (customer records)
+
+Impact & Response
+  NOTE — DEFENDER ACTION: Customer notification & IR
+    Desc: CNA notified ~75k customers; engaged forensics and IR.
+    start: 2021-03-22T12:00:00.000+10:30
+    parents: Data staging & exfiltration (customer records)
+  NOTE — DEFENDER ACTION: Regulatory review (OFAC/sanctions)
+    Desc: Payment considerations complicated by sanctions; legal review.
+    start: 2021-05-01T12:00:00.000+10:30
+    parents: NOTE — DEFENDER ACTION: Customer notification & IR
+
+Post-Attack & Recovery
+  System rebuild & remediation (patching, reset)
+    Desc: Re-image endpoints, rotate creds, strengthen controls.
+    start: 2021-04-01T12:00:00.000+10:30
+    parents: NOTE — DEFENDER ACTION: Customer notification & IR
+  Policy updates (payment/legal playbooks)
+    Desc: Update payment approval, legal checklists for sanctions exposure.
+    start: 2021-05-15T12:00:00.000+10:30
+    parents: NOTE — DEFENDER ACTION: Regulatory review (OFAC/sanctions)
+
+REMAINDER:
+[]
