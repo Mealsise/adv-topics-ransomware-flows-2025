@@ -132,7 +132,8 @@ def build_md_table(rows: List[Dict[str, str]]) -> str:
     body_lines: List[str] = []
     for row in rows:
         body_lines.append(
-            f"| [{row['name']}](../{row['path']}) | {row['group']} | {row['year']} | "
+            f"| {row['name']} | {row['group']} | {row['year']} | "
+            # f"| [{row['name']}](../{row['path']}) | {row['group']} | {row['year']} | "
             f"{row['analytical']} | {row['docq']} | {row['status']} |"
         )
     return header + "\n".join(body_lines) + "\n"
