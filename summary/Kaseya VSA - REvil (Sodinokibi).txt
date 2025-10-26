@@ -30,6 +30,12 @@ Notes:
       Key withheld until ~July 21, 2021. [Wikipedia] 2+ weeks after attack. Despite being obtained by the FBI earlier.
      Congressional Scrutiny
       Congress demanded FBI explain delay in key release. [Bleeping Computer] FBI claimed it delayed release to test the key and coordinate with agencies. [Cybersecurity Dive]
+     Vendor / Government Advisory / Shutdown
+      Kaseya ordered shutdown of VSA servers; CISA/FBI released guidance; MSPs forced to patch or recover. [CISA]
+     DOJ / Law Enforcement Arrests & Prosecution
+      Yaroslav Vasinskyi extradited, tried, and sentenced to ~13 years, ordered restitution >$16M. [Reuters]
+     Release Universal Decryptor / Keys
+      Kaseya & security teams facilitate a universal decryption key to recover many victims. [NCSC PDF][Kaseya]
 
 ------------------------------------------------------------
 
@@ -77,18 +83,6 @@ Actions:
           TACT/TECH: TA0040 / T1657
           Attackers demand $70M for a universal decryptor, or per-victim demands. REvil threatens leak or refusal otherwise. [Wikipedia][Reuters]
           start: 2021-07-05T00:00:00.000
-     Vendor / Government Advisory / Shutdown
-          TACT/TECH: NONE GIVEN / NONE GIVEN
-          Kaseya ordered shutdown of VSA servers; CISA/FBI released guidance; MSPs forced to patch or recover. [CISA]
-          start: 2021-07-02T00:00:00.000
-     Release Universal Decryptor / Keys
-          TACT/TECH: NONE GIVEN / NONE GIVEN
-          Kaseya & security teams facilitate a universal decryption key to recover many victims. [NCSC PDF][Kaseya]
-          start: 2021-07-21T00:00:00.000
-     DOJ / Law Enforcement Arrests & Prosecution
-          TACT/TECH: NONE GIVEN / NONE GIVEN
-          Yaroslav Vasinskyi extradited, tried, and sentenced to ~13 years, ordered restitution >$16M. [Reuters]
-          start: 2024-05-01T00:00:00.000
 
 ------------------------------------------------------------
 

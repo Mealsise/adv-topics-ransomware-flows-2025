@@ -29,6 +29,12 @@ Notes:
       DarkSide went offline days after attack; infrastructure seized or shut down. [NYT]
      Regulatory and Legal Fallout
       Triggered U.S. review of pipeline cybersecurity standards; Colonial faced lawsuits and regulatory pressure. [NYT, BBC]
+     DoJ Cryptocurrency Seizure (~$2.3M)
+      DoJ traced Bitcoin wallet and seized ~63.7 BTC (~$2.3M). [DoJ Press Release]
+     Partial Restoration of Operations
+      Decryption tool provided by DarkSide was slow; Colonial rebuilt systems in parallel. [CISA/FBI Joint Advisory]
+     Ransom Payment (~$4.4M in Bitcoin)
+      Colonial Pipeline CEO testified ransom was paid quickly (~May 7, 2021). [Senate Testimony]
 
 ------------------------------------------------------------
 
@@ -65,17 +71,8 @@ Actions:
      Deploy DarkSide Ransomware Payload
           TACT/TECH: TA0040 / T1486
      Ransom Demand Issued (DarkSide)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
+          TACT/TECH: TA0040 / T1657
           DarkSide demanded payment to restore access and prevent leaks. [CISA/FBI]
-     Ransom Payment (~$4.4M in Bitcoin)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
-          Colonial Pipeline CEO testified ransom was paid quickly (~May 7, 2021). [Senate Testimony]
-     Partial Restoration of Operations
-          TACT/TECH: NONE GIVEN / NONE GIVEN
-          Decryption tool provided by DarkSide was slow; Colonial rebuilt systems in parallel. [CISA/FBI Joint Advisory]
-     DoJ Cryptocurrency Seizure (~$2.3M)
-          TACT/TECH: NONE GIVEN / NONE GIVEN
-          DoJ traced Bitcoin wallet and seized ~63.7 BTC (~$2.3M). [DoJ Press Release]
 
 ------------------------------------------------------------
 

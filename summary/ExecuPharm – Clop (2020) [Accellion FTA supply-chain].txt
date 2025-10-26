@@ -1,0 +1,69 @@
+FLOW:
+name: ExecuPharm – Clop (2020) [Accellion FTA supply-chain]
+description: 2020 Accellion FTA supply-chain compromises; Clop data theft and public leaks; pharma downstream exposure.
+author: Tyler - individual - tyler@roe-smith.com
+scope: campaign
+references:
+  HHS Accellion Analyst Note - Accellion timeline & vulnerabilities. - https://www.hhs.gov/sites/default/files/accellion-analyst-note.pdf
+  BleepingComputer - Global Accellion breaches linked to Clop. - https://www.bleepingcomputer.com/news/security/global-accellion-data-breaches-linked-to-clop-ransomware-gang/
+  SentinelOne - Clop analysis & DEWMODE web shell. - https://www.sentinelone.com/anthology/clop/
+  Infosecurity - ExecuPharm disclosure coverage. - https://www.infosecurity-magazine.com/news/execupharm-suffers-data/
+
+------------------------------------------------------------
+
+Empty Notes:
+     Pre-attack and Initial Access
+     Foothold & Recon
+     Lateral Movement & Privilege Escalation
+     Exfiltration & Leak/Extortion
+     Impact & Response
+     Post-Attack & Recovery
+
+Notes:
+     DEFENDER ACTION: Vendor advisory & patches
+      Accellion issues patches, advisories, and customer notifications.
+     DEFENDER ACTION: Customer notification & legal follow-up
+      Affected partners notified; regulatory reports and litigation initiated.
+     Remediation & decommission of legacy FTA
+      Retire Accellion FTA, migrate to supported file-transfer solutions.
+     Long-tail reputational & contractual impact
+      Contract reviews, supplier audits, and extended due-diligence cycles.
+
+------------------------------------------------------------
+
+Actions:
+     Vendor reconnaissance (scan FTA endpoints)
+          TACT/TECH: TA0043 / T1595
+          Scan for internet-facing Accellion FTA instances and versions.
+     Initial App Exploit (Accellion FTA zero-day)
+          TACT/TECH: TA0001 / T1190
+          Exploit Accellion FTA webapp (zero-days) to access file stores.
+     Web shell / backdoor implantation (DEWMODE)
+          TACT/TECH: TA0003 / T1133
+          Deploy web shell to retain access in vendor-hosted FTA.
+     Map victim file stores & partner manifests
+          TACT/TECH: TA0007 / T1018
+          Enumerate customer folders, partner manifests, sensitive datasets.
+     Pivot to corporate networks via supplier portals
+          TACT/TECH: TA0008 / T1021
+          Use supplier access to reach corporate hosts or credentials.
+     OS Credential Dumping
+          TACT/TECH: TA0006 / T1003
+          Extract credentials from stored files or transferred manifests.
+     Data Staging (sensitive PHI/PII/contracts)
+          TACT/TECH: TA0009 / T1074
+          Stage selected research, contracts, and PII for transfer.
+     Extortion notices to victims (second wave)
+          TACT/TECH: TA0040 / T1657
+          Send targeted emails or postings demanding ransom to prevent full release.
+     Publish on Clop leak site (first wave)
+          TACT/TECH: TA0040 / T1657
+          Post initial victim listings and sample stolen data to pressure payment.
+     Mass Exfiltration to attacker servers
+          TACT/TECH: TA0010 / T1041
+          Bulk exfiltration of staged datasets to remote attacker infrastructure.
+
+------------------------------------------------------------
+
+REMAINDER:
+[]

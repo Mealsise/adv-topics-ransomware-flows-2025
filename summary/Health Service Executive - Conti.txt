@@ -28,6 +28,12 @@ Notes:
       Irish government/HSE refused to pay ransom; recovery pursued independently. [HSE Official Page]
      Financial & Legal Impact
       Cost > €100M, lawsuits and compensation claims ongoing. [RTÉ News]
+     Legal Injunctions Against Data Sharing
+      High Court injunctions to prevent media/actors from publishing leaked data. [RTÉ News]
+     Recovery & System Rebuild
+      Gradual recovery over months; re-imaging thousands of endpoints. [PwC Independent Review]
+     HSE Shuts Down All IT Systems
+      To contain spread, HSE disconnected National Healthcare Network. [ENISA Report]
 
 ------------------------------------------------------------
 
@@ -67,18 +73,9 @@ Actions:
      Deploy Conti Ransomware Payload
           TACT/TECH: TA0040 / T1486
           On 14 May 2021, ransomware encrypted majority of HSE systems. [HSE Official Page]
-     HSE Shuts Down All IT Systems
-          TACT/TECH: NONE GIVEN / NONE GIVEN
-          To contain spread, HSE disconnected National Healthcare Network. [ENISA Report]
      Ransom Demand Issued
           TACT/TECH: TA0040 / T1657
           Conti demanded payment, threatened to leak data. [PwC Independent Review]
-     Legal Injunctions Against Data Sharing
-          TACT/TECH: NONE GIVEN / NONE GIVEN
-          High Court injunctions to prevent media/actors from publishing leaked data. [RTÉ News]
-     Recovery & System Rebuild
-          TACT/TECH: NONE GIVEN / NONE GIVEN
-          Gradual recovery over months; re-imaging thousands of endpoints. [PwC Independent Review]
 
 ------------------------------------------------------------
 

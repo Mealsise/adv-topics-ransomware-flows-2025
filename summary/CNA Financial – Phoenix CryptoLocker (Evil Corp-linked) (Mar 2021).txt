@@ -1,0 +1,68 @@
+FLOW:
+name: CNA Financial – Phoenix CryptoLocker (Evil Corp-linked) (Mar 2021)
+description: March 2021 ransomware at CNA; fake browser-update social engineering → remote compromise → Phoenix CryptoLocker; OFAC/sanctions payment context complicates response.
+author: Tyler - individual - tyler@roe-smith.com
+scope: campaign
+references:
+  Malwarebytes - CNA legal filings & timeline. - https://www.malwarebytes.com/blog/news/2021/07/cna-legal-filings-lift-the-curtain-on-a-phoenix-cryptolocker-ransomware-attack
+  BleepingComputer - CNA breached via fake browser update. - https://www.bleepingcomputer.com/news/security/ransomware-gang-breached-cnas-network-via-fake-browser-update/
+  UpGuard - CNA timeline & customer count notified. - https://www.upguard.com/news/cna-ransomware-attack
+  Cybersecurity Dive - OFAC/sanctions payment context. - https://www.cybersecuritydive.com/news/cna-financial-ransomware-payment-treasury-sanctions/600591/
+
+------------------------------------------------------------
+
+Empty Notes:
+     Pre-attack & Initial Access
+     Foothold & Recon
+     Lateral Movement & Privilege Escalation
+     Exfiltration & Ransomware Deployment
+     Impact & Response
+     Post-Attack & Recovery
+
+Notes:
+     DEFENDER ACTION: Customer notification
+      CNA notified ~75k customers and regulators about breach exposure.
+     DEFENDER ACTION: Incident response engagement (forensics & containment)
+      External IR firm retained for investigation and remediation.
+     DEFENDER ACTION: Regulatory review (OFAC/sanctions)
+      Payment considerations complicated by sanctions; legal review.
+     System rebuild & remediation (patching, reset)
+      Re-image endpoints, rotate creds, strengthen controls.
+     Policy updates (payment/legal playbooks)
+      Update payment approval, legal checklists for sanctions exposure.
+
+------------------------------------------------------------
+
+Actions:
+     Recon & lure creation (targeting remote staff)
+          TACT/TECH: TA0043 / T1595
+          Prepare fake browser-update lures for remote workers.
+     Social-engineer install (fake browser update)
+          TACT/TECH: TA0002 / T1204.001
+          Victim installs fake update; malware executed locally.
+     Remote code exec & backdoor install
+          TACT/TECH: TA0002 / T1059
+          Backdoor provides persistent remote shells on endpoints.
+     Internal discovery (VPN, shares, AD)
+          TACT/TECH: TA0007 / T1018
+          Enumerate VPN, file shares, AD objects for targets.
+     Credential Harvesting & VPN compromise
+          TACT/TECH: TA0006 / T1003
+          Harvested creds used to access VPN and escalate privileges.
+     Lateral movement to domain controllers / cores
+          TACT/TECH: TA0006 / T1003
+          Spread to key servers; prep for encryption.
+     Data Staging (customer records)
+          TACT/TECH: TA0009 / T1074
+          Stage customer data sets and sensitive files prior to transfer.
+     Exfiltration to attacker infrastructure
+          TACT/TECH: TA0010 / T1041
+          Exfiltrate staged customer data to remote servers.
+     Deploy Phoenix CryptoLocker (mass encryption)
+          TACT/TECH: TA0040 / T1486
+          Phoenix CryptoLocker runs across endpoints; service disruption.
+
+------------------------------------------------------------
+
+REMAINDER:
+[]

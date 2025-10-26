@@ -1,0 +1,75 @@
+FLOW:
+name: MGM Resorts – ALPHV/Scattered Spider (2023)
+description: Sept 2023 identity-centric attack via help-desk vishing -> IdP/session takeover; reservations and casino systems disrupted; customer PII accessed; legal fallout.
+author: Tyler - individual - tyler@roe-smith.com
+scope: incident
+references:
+  MGM Investor Update - Official incident update; PII accessed on Sept 11, 2023. - https://investors.mgmresorts.com/investors/news-releases/press-release-details/2023/MGM-RESORTS-UPDATE-ON-RECENT-CYBERSECURITY-ISSUE/default.aspx
+  AP News - Shutdowns across properties; FBI involvement. - https://apnews.com/article/06de044bdf1880af2a8bce1a38c986ee
+  BleepingComputer - ~$100M loss; data theft. - https://www.bleepingcomputer.com/news/security/mgm-resorts-ransomware-attack-led-to-100-million-loss-data-theft/
+  CyberArk - Help-desk social engineering analysis. - https://www.cyberark.com/resources/blog/the-mgm-resorts-attack-initial-analysis
+  CISA AA23-320A - Scattered Spider advisory. - https://www.cisa.gov/sites/default/files/2023-11/aa23-320a_scattered_spider_0.pdf
+
+------------------------------------------------------------
+
+Empty Notes:
+     Pre-attack & Initial Access
+     Foothold & Recon
+     Lateral Movement & Privilege Escalation
+     Exfiltration & Ransomware/Disruption
+     Impact & Response
+     Post-Attack & Recovery
+
+Notes:
+     DEFENDER ACTION: Immediate Containment & FBI engagement
+      Systems shutdown, IR retained, FBI engaged; public notice.
+     DEFENDER ACTION: Customer notification & regulatory filings
+      Notifications, potential class actions; disclosure of PII types.
+     Phased Service Restoration (manual workarounds)
+      Rebuild services, phased restoration of reservation and ops.
+     Learned & Hardening (IdP/help-desk controls)
+      Harden IdP, block social-engineer vectors, revise help-desk SOPs.
+
+------------------------------------------------------------
+
+Actions:
+     External Reconnaissance (employee profiling)
+          TACT/TECH: TA0043 / T1595
+          OSINT/LinkedIn to find help-desk targets and roles.
+     Vishing campaign (help-desk impersonation)
+          TACT/TECH: TA0043 / T1598
+          Phone calls to IT to request MFA/resets or session help.
+     Account takeover via reset (valid session)
+          TACT/TECH: TA0001 / T1078
+          Use social-engineered resets to create valid sessions.
+     Establish Persistence (support account / session tokens)
+          TACT/TECH: TA0003 / T1133
+          Save tokens, create support accounts or persistent sessions.
+     Internal Reconnaissance (reservation DBs, kiosks, PII stores)
+          TACT/TECH: TA0007 / T1018
+          Map reservation systems, kiosks, PII repositories.
+     Discovery of IdP/SSO controls & help-desk workflows
+          TACT/TECH: TA0043 / T1595
+          Locate identity provider controls, reset processes to exploit.
+     Credential Harvesting / Token Abuse
+          TACT/TECH: TA0006 / T1003
+          Extract tokens/credentials from sessions and endpoints.
+     Lateral Movement (admin tooling across properties)
+          TACT/TECH: TA0008 / T1021
+          Use admin interfaces to access multiple property systems.
+     Privilege Escalation (super-admin via stolen tokens/creds)
+          TACT/TECH: TA0006 / T1078
+          Obtain high-level accounts to disable controls & access PII.
+     Data Staging & Exfiltration (customer PII)
+          TACT/TECH: TA0010 / T1041
+          Copy customer PII off-network for leverage.
+     Triggered Operational Disruption (systems taken offline)
+          TACT/TECH: TA0040 / T1486
+          Company or attackers cause system shutdowns (reservations/slots).
+     Extortion Demand & Threat of Disclosure
+          TACT/TECH: TA0040 / T1657
+
+------------------------------------------------------------
+
+REMAINDER:
+[]
