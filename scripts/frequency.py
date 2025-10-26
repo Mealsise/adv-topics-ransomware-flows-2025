@@ -209,6 +209,57 @@ def save_hist_png_sorted_by_code(title, rows, cols, counts, out_png, include_zer
     fig.savefig(out_png, bbox_inches="tight", pad_inches=0.03)
     plt.close(fig)
 
+# ---------- Pie chart ----------
+def save_pie_png(title, label_to_count, out_png: Path):
+    """
+    Render a pie chart from {label: count} with a muted green palette
+    consistent with other figs. Largest slice = darkest green.
+    """
+    if not label_to_count:
+        print(f"[warn] No data for {title}; skipping pie.")
+        return
+
+    # sort by size (desc) so colors map consistently
+    items = sorted(label_to_count.items(), key=lambda kv: kv[1], reverse=True)
+    labels = [k for k, _ in items]
+    sizes  = [v for _, v in items]
+
+    # build a soft sequential palette from matplotlib 'Greens'
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from matplotlib.cm import get_cmap
+
+    n = len(sizes)
+    cmap = get_cmap("Greens")
+    # pick evenly spaced shades, avoiding extremes to keep it soft
+    # darker for larger slices (first items)
+    shades = np.linspace(0.85, 0.35, num=n)  # light → mid
+    colors = [cmap(s) for s in shades]
+
+    fig, ax = plt.subplots(figsize=(5.2, 4.2), dpi=200)
+    wedges, texts, autotexts = ax.pie(
+        sizes,
+        labels=labels,
+        colors=colors,
+        autopct=lambda p: f"{p:.0f}%" if p >= 1 else f"{p:.1f}%",
+        startangle=90,
+        counterclock=False,
+        wedgeprops=dict(edgecolor=(1, 1, 1, 0.95), linewidth=0.8)  # subtle separators
+    )
+    ax.axis("equal")
+    ax.set_title(title, pad=8)
+
+    # text styling: darker gray, small & readable
+    for t in texts:
+        t.set_color((0.15, 0.15, 0.15))
+        t.set_fontsize(8)
+    for t in autotexts:
+        t.set_color((0.05, 0.05, 0.05))
+        t.set_fontsize(8)
+
+    out_png.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(out_png, bbox_inches="tight", pad_inches=0.03)
+    plt.close(fig)
 
 
 # ---------- Run ----------
@@ -223,13 +274,22 @@ if __name__ == "__main__":
     t_csv  = out_dir / "T_table.csv"
     ta_hist_png = out_dir / "TA_hist.png"
     t_hist_png  = out_dir / "T_hist.png"
+    type_pie_png = out_dir / "path_types_pie.png"
 
+    type_counts = {
+        "Type 1": 5,
+        "Type 2": 3,
+        "Type 3": 1
+    }
 
     # PNGs
     save_table_png("Figure 1: ATT&CK Tactics counts", row_order, ta_cols, counts, ta_png)
     save_table_png("Figure 2: ATT&CK Techniques counts", row_order, t_cols, counts, t_png)
-    save_hist_png_sorted_by_code("Figure 3: ATT&CK Tactics frequency", row_order, ta_cols, counts, ta_hist_png)
-    save_hist_png_sorted_by_code("Figure 4: ATT&CK Techniques frequency", row_order, t_cols, counts, t_hist_png)
+    save_pie_png("Figure 3: Path-type distribution", type_counts, type_pie_png)
+    save_hist_png_sorted_by_code("Figure 4: ATT&CK Tactics frequency", row_order, ta_cols, counts, ta_hist_png)
+    save_hist_png_sorted_by_code("Figure 5: ATT&CK Techniques frequency", row_order, t_cols, counts, t_hist_png)
+
+
 
     # CSVs
     write_csv(row_order, ta_cols, counts, ta_csv)
