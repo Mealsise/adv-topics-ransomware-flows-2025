@@ -149,16 +149,16 @@
                 "78e81a9b-8f77-4a9b-8bdf-93f530e017a9",
                 "40e22d47-2b42-4152-a62e-c797424efe48",
                 "e9416cdd-bb57-4a38-9779-ef111938ee00",
-                "489ebc84-212b-466e-b771-810699ec2be0",
                 "970718e6-851f-431f-bec0-395a1d4ba04c",
-                "8b28372c-3c7f-49fe-bc12-f47199c4f715",
                 "275e9323-d786-4120-9e81-43a5fd081ec5",
                 "198792d3-9f55-4531-ba7e-b73a5ebdb532",
                 "ac2277da-5bfc-4c4b-ad7b-90058b05ec11",
                 "2215e714-8acb-4187-88df-9010e8b61d0e",
-                "6ddbeb46-eb14-41ac-a54b-4f5fe1cb3c9d",
                 "9118f7ee-6411-4fd2-9795-13920cb53a2e",
-                "f90a6935-6796-465f-b96c-1fd04cb8eb9b",
+                "32dd5763-d04b-451f-a0f1-b3723102462f",
+                "98f4fcaa-66f5-40eb-a853-a8a6f96eb9ec",
+                "bbbba229-4a83-4b09-81d7-4b253be0af63",
+                "59423936-5c9d-4a77-b98e-701d027d57aa",
                 "e4539474-90ec-4ff8-a82a-c20e3daad9df",
                 "044b115e-c3fa-46f0-8ba1-64ff5e087fea",
                 "1932ffbf-e706-44bb-872f-e8df2bd87608",
@@ -177,13 +177,13 @@
                 "20bb9868-9d78-48e5-a32a-06c2b54def93",
                 "08e196a3-78b6-43a7-b597-b3aa85568492",
                 "f07f8102-acc8-45e5-8da6-20102af98b8c",
-                "454cc69f-a3d7-4514-a6c9-c65b6e22b490",
                 "dfad1ddd-eada-4dca-860a-4708998aeb7e",
-                "91223faf-5e74-45b5-9105-fc3543cda407",
                 "1fc7858c-5b43-4e74-bef6-965fb046914f",
-                "80dadd32-7a13-43da-b12b-08366b7d8c64",
                 "85b7b304-c500-4f4d-9c2c-97c3594b20a9",
-                "82fff74b-05d9-4903-8272-b133367afca7"
+                "82fff74b-05d9-4903-8272-b133367afca7",
+                "6f90bb6b-8b49-4506-bf1a-fe0e9507003f",
+                "d6a2b0e6-9860-4675-b47d-a26a1860e5aa",
+                "0a52f30c-935b-48b4-9f8d-c6b470add83c"
             ]
         },
         {
@@ -503,27 +503,6 @@
         },
         {
             "id": "dynamic_line",
-            "instance": "489ebc84-212b-466e-b771-810699ec2be0",
-            "source": "1a98874c-cecf-49a1-b4e2-bde2afc40895",
-            "target": "0dc1a0a6-f031-4611-ac04-53b0e6055478",
-            "handles": [
-                "ebdb116f-1103-4304-9051-709cc6ddbd7c"
-            ]
-        },
-        {
-            "id": "generic_latch",
-            "instance": "1a98874c-cecf-49a1-b4e2-bde2afc40895"
-        },
-        {
-            "id": "generic_latch",
-            "instance": "0dc1a0a6-f031-4611-ac04-53b0e6055478"
-        },
-        {
-            "id": "generic_handle",
-            "instance": "ebdb116f-1103-4304-9051-709cc6ddbd7c"
-        },
-        {
-            "id": "dynamic_line",
             "instance": "970718e6-851f-431f-bec0-395a1d4ba04c",
             "source": "38250a37-b5d9-48c0-ba7f-fe1153cffffd",
             "target": "b0119b10-c845-4a60-b86a-df9f082a7af8",
@@ -542,27 +521,6 @@
         {
             "id": "generic_handle",
             "instance": "b416138d-0545-4a95-9c68-756dd321fe10"
-        },
-        {
-            "id": "dynamic_line",
-            "instance": "8b28372c-3c7f-49fe-bc12-f47199c4f715",
-            "source": "5de5ce0b-1758-4084-b1d2-a472ee68a377",
-            "target": "77e24cbc-e92a-4391-80d6-f74d15872239",
-            "handles": [
-                "ec205ca5-8d72-4146-9f87-c6166f8c516f"
-            ]
-        },
-        {
-            "id": "generic_latch",
-            "instance": "5de5ce0b-1758-4084-b1d2-a472ee68a377"
-        },
-        {
-            "id": "generic_latch",
-            "instance": "77e24cbc-e92a-4391-80d6-f74d15872239"
-        },
-        {
-            "id": "generic_handle",
-            "instance": "ec205ca5-8d72-4146-9f87-c6166f8c516f"
         },
         {
             "id": "dynamic_line",
@@ -650,27 +608,6 @@
         },
         {
             "id": "dynamic_line",
-            "instance": "6ddbeb46-eb14-41ac-a54b-4f5fe1cb3c9d",
-            "source": "af45dc54-84f4-48ca-98a9-c72e7700c8e1",
-            "target": "338712f6-c493-45bc-a747-e3aee996c42d",
-            "handles": [
-                "b0b2dc52-34b0-4c67-8822-0595bf661cbb"
-            ]
-        },
-        {
-            "id": "generic_latch",
-            "instance": "af45dc54-84f4-48ca-98a9-c72e7700c8e1"
-        },
-        {
-            "id": "generic_latch",
-            "instance": "338712f6-c493-45bc-a747-e3aee996c42d"
-        },
-        {
-            "id": "generic_handle",
-            "instance": "b0b2dc52-34b0-4c67-8822-0595bf661cbb"
-        },
-        {
-            "id": "dynamic_line",
             "instance": "9118f7ee-6411-4fd2-9795-13920cb53a2e",
             "source": "84b3a9f6-bddb-4cef-bee6-452e04164b87",
             "target": "4376874f-07ed-4138-9666-475a344b923b",
@@ -692,24 +629,87 @@
         },
         {
             "id": "dynamic_line",
-            "instance": "f90a6935-6796-465f-b96c-1fd04cb8eb9b",
-            "source": "8bdcc839-505a-4208-a182-1428abcc8589",
-            "target": "2c8b9ea5-5482-4255-9e41-15a89884d9a3",
+            "instance": "32dd5763-d04b-451f-a0f1-b3723102462f",
+            "source": "61e438ce-dd28-4035-9d1c-210d2bbbeed0",
+            "target": "0ceb1d81-94f8-459a-8e7d-95d728ca0e3d",
             "handles": [
-                "46743de6-3f8b-4792-870f-19bf76f0d5d8"
+                "6a229a46-3fa3-4d8a-819d-b35b85569e94"
             ]
         },
         {
             "id": "generic_latch",
-            "instance": "8bdcc839-505a-4208-a182-1428abcc8589"
+            "instance": "61e438ce-dd28-4035-9d1c-210d2bbbeed0"
         },
         {
             "id": "generic_latch",
-            "instance": "2c8b9ea5-5482-4255-9e41-15a89884d9a3"
+            "instance": "0ceb1d81-94f8-459a-8e7d-95d728ca0e3d"
         },
         {
             "id": "generic_handle",
-            "instance": "46743de6-3f8b-4792-870f-19bf76f0d5d8"
+            "instance": "6a229a46-3fa3-4d8a-819d-b35b85569e94"
+        },
+        {
+            "id": "dynamic_line",
+            "instance": "98f4fcaa-66f5-40eb-a853-a8a6f96eb9ec",
+            "source": "e94c9c57-e9ef-49ff-b0e9-dadb879797de",
+            "target": "5ac8fd7b-7268-4d03-ab52-39138e8e5835",
+            "handles": [
+                "eb006275-aa31-453b-8a6a-51482e03a5a2"
+            ]
+        },
+        {
+            "id": "generic_latch",
+            "instance": "e94c9c57-e9ef-49ff-b0e9-dadb879797de"
+        },
+        {
+            "id": "generic_latch",
+            "instance": "5ac8fd7b-7268-4d03-ab52-39138e8e5835"
+        },
+        {
+            "id": "generic_handle",
+            "instance": "eb006275-aa31-453b-8a6a-51482e03a5a2"
+        },
+        {
+            "id": "dynamic_line",
+            "instance": "bbbba229-4a83-4b09-81d7-4b253be0af63",
+            "source": "e09d1957-09fd-4c51-8262-e9589053b924",
+            "target": "f37a88ed-eae9-4e12-9581-32bfcbbe78f3",
+            "handles": [
+                "429915ed-08b0-43dd-b647-5f8e67eb0f87"
+            ]
+        },
+        {
+            "id": "generic_latch",
+            "instance": "e09d1957-09fd-4c51-8262-e9589053b924"
+        },
+        {
+            "id": "generic_latch",
+            "instance": "f37a88ed-eae9-4e12-9581-32bfcbbe78f3"
+        },
+        {
+            "id": "generic_handle",
+            "instance": "429915ed-08b0-43dd-b647-5f8e67eb0f87"
+        },
+        {
+            "id": "dynamic_line",
+            "instance": "59423936-5c9d-4a77-b98e-701d027d57aa",
+            "source": "02f7efa7-deea-4a6a-afd4-1d428bac5c21",
+            "target": "58e3de03-5dc4-4f58-82d8-1d8c0e855b9a",
+            "handles": [
+                "ec03767f-a662-4a68-bf90-81e1d9452d19"
+            ]
+        },
+        {
+            "id": "generic_latch",
+            "instance": "02f7efa7-deea-4a6a-afd4-1d428bac5c21"
+        },
+        {
+            "id": "generic_latch",
+            "instance": "58e3de03-5dc4-4f58-82d8-1d8c0e855b9a"
+        },
+        {
+            "id": "generic_handle",
+            "instance": "ec03767f-a662-4a68-bf90-81e1d9452d19"
         },
         {
             "id": "action",
@@ -2424,11 +2424,11 @@
                     [
                         [
                             "tactic",
-                            null
+                            "TA0040"
                         ],
                         [
                             "technique",
-                            null
+                            "T1657"
                         ]
                     ]
                 ],
@@ -2500,7 +2500,7 @@
             "id": "horizontal_anchor",
             "instance": "a805ed19-4fa6-4d3a-942f-11b263bd896c",
             "latches": [
-                "1a98874c-cecf-49a1-b4e2-bde2afc40895"
+                "0ceb1d81-94f8-459a-8e7d-95d728ca0e3d"
             ]
         },
         {
@@ -2619,125 +2619,6 @@
             "latches": []
         },
         {
-            "id": "action",
-            "instance": "454cc69f-a3d7-4514-a6c9-c65b6e22b490",
-            "properties": [
-                [
-                    "name",
-                    "Ransom Payment (~$4.4M in Bitcoin)"
-                ],
-                [
-                    "ttp",
-                    [
-                        [
-                            "tactic",
-                            null
-                        ],
-                        [
-                            "technique",
-                            null
-                        ]
-                    ]
-                ],
-                [
-                    "description",
-                    "Colonial Pipeline CEO testified ransom was paid quickly (~May 7, 2021). [Senate Testimony]"
-                ],
-                [
-                    "confidence",
-                    null
-                ],
-                [
-                    "execution_start",
-                    null
-                ],
-                [
-                    "execution_end",
-                    null
-                ]
-            ],
-            "anchors": {
-                "0": "c4f5a402-3a83-4949-b89a-d2b5f18f1d38",
-                "30": "c508d0c0-abe4-4977-8f68-d5099ad94e87",
-                "60": "eeece391-73c4-40e8-801c-37dfcad8badd",
-                "90": "a526719a-b292-41aa-b656-98426e3b513e",
-                "120": "b4785315-80d5-418b-a7ee-04fab19c043a",
-                "150": "442243a2-5525-422d-a9b3-d5cb64cad1d2",
-                "180": "b8cf7a98-e520-4def-8ab5-7024adee4ce6",
-                "210": "e47e1ac1-4362-4418-92cb-579c46c6cae5",
-                "240": "b698d982-756c-461f-b730-77f067e43852",
-                "270": "58d71d3b-8c17-4f66-bbb5-c9c35b3d2d5b",
-                "300": "92f37c15-06c0-496b-ae7a-f7abe0001530",
-                "330": "0a6660ba-499b-4133-a776-76785511500e"
-            }
-        },
-        {
-            "id": "horizontal_anchor",
-            "instance": "c4f5a402-3a83-4949-b89a-d2b5f18f1d38",
-            "latches": [
-                "0dc1a0a6-f031-4611-ac04-53b0e6055478"
-            ]
-        },
-        {
-            "id": "horizontal_anchor",
-            "instance": "c508d0c0-abe4-4977-8f68-d5099ad94e87",
-            "latches": []
-        },
-        {
-            "id": "vertical_anchor",
-            "instance": "eeece391-73c4-40e8-801c-37dfcad8badd",
-            "latches": []
-        },
-        {
-            "id": "vertical_anchor",
-            "instance": "a526719a-b292-41aa-b656-98426e3b513e",
-            "latches": []
-        },
-        {
-            "id": "vertical_anchor",
-            "instance": "b4785315-80d5-418b-a7ee-04fab19c043a",
-            "latches": []
-        },
-        {
-            "id": "horizontal_anchor",
-            "instance": "442243a2-5525-422d-a9b3-d5cb64cad1d2",
-            "latches": []
-        },
-        {
-            "id": "horizontal_anchor",
-            "instance": "b8cf7a98-e520-4def-8ab5-7024adee4ce6",
-            "latches": []
-        },
-        {
-            "id": "horizontal_anchor",
-            "instance": "e47e1ac1-4362-4418-92cb-579c46c6cae5",
-            "latches": []
-        },
-        {
-            "id": "vertical_anchor",
-            "instance": "b698d982-756c-461f-b730-77f067e43852",
-            "latches": []
-        },
-        {
-            "id": "vertical_anchor",
-            "instance": "58d71d3b-8c17-4f66-bbb5-c9c35b3d2d5b",
-            "latches": [
-                "5de5ce0b-1758-4084-b1d2-a472ee68a377"
-            ]
-        },
-        {
-            "id": "vertical_anchor",
-            "instance": "92f37c15-06c0-496b-ae7a-f7abe0001530",
-            "latches": [
-                "af45dc54-84f4-48ca-98a9-c72e7700c8e1"
-            ]
-        },
-        {
-            "id": "horizontal_anchor",
-            "instance": "0a6660ba-499b-4133-a776-76785511500e",
-            "latches": []
-        },
-        {
             "id": "note",
             "instance": "dfad1ddd-eada-4dca-860a-4708998aeb7e",
             "properties": [
@@ -2829,121 +2710,6 @@
         {
             "id": "horizontal_anchor",
             "instance": "cf9999b6-ddcf-479b-9c92-64b23deac31b",
-            "latches": []
-        },
-        {
-            "id": "action",
-            "instance": "91223faf-5e74-45b5-9105-fc3543cda407",
-            "properties": [
-                [
-                    "name",
-                    "Partial Restoration of Operations"
-                ],
-                [
-                    "ttp",
-                    [
-                        [
-                            "tactic",
-                            null
-                        ],
-                        [
-                            "technique",
-                            null
-                        ]
-                    ]
-                ],
-                [
-                    "description",
-                    "Decryption tool provided by DarkSide was slow; Colonial rebuilt systems in parallel. [CISA/FBI Joint Advisory]"
-                ],
-                [
-                    "confidence",
-                    null
-                ],
-                [
-                    "execution_start",
-                    null
-                ],
-                [
-                    "execution_end",
-                    null
-                ]
-            ],
-            "anchors": {
-                "0": "a7a696a6-45e4-4fbd-9086-657906dfc588",
-                "30": "b48dea61-3d8e-418a-8f2d-a82114b916a4",
-                "60": "b8de6735-cb00-46f3-bf68-303c161e709e",
-                "90": "30bcd684-62c7-4ce0-b787-a0f7b80c2c84",
-                "120": "5b25806d-0fa8-448f-b93d-1af5fc4708aa",
-                "150": "3686e77b-c27f-4ba4-bee0-54cf7892746e",
-                "180": "6df8caa6-6f42-4233-b884-d41fd971e699",
-                "210": "d30f004e-eb0d-43f8-ae65-f057b04a44bf",
-                "240": "1c156e34-cc9b-44f9-802a-0e5f44bb9611",
-                "270": "e17194af-1436-4de8-b873-79d9dccbb259",
-                "300": "19e8e169-95e1-4a46-8dfe-e94f8e3115c5",
-                "330": "29635e81-6546-467c-899d-0cc1fc9a9e6e"
-            }
-        },
-        {
-            "id": "horizontal_anchor",
-            "instance": "a7a696a6-45e4-4fbd-9086-657906dfc588",
-            "latches": []
-        },
-        {
-            "id": "horizontal_anchor",
-            "instance": "b48dea61-3d8e-418a-8f2d-a82114b916a4",
-            "latches": []
-        },
-        {
-            "id": "vertical_anchor",
-            "instance": "b8de6735-cb00-46f3-bf68-303c161e709e",
-            "latches": []
-        },
-        {
-            "id": "vertical_anchor",
-            "instance": "30bcd684-62c7-4ce0-b787-a0f7b80c2c84",
-            "latches": [
-                "77e24cbc-e92a-4391-80d6-f74d15872239"
-            ]
-        },
-        {
-            "id": "vertical_anchor",
-            "instance": "5b25806d-0fa8-448f-b93d-1af5fc4708aa",
-            "latches": []
-        },
-        {
-            "id": "horizontal_anchor",
-            "instance": "3686e77b-c27f-4ba4-bee0-54cf7892746e",
-            "latches": []
-        },
-        {
-            "id": "horizontal_anchor",
-            "instance": "6df8caa6-6f42-4233-b884-d41fd971e699",
-            "latches": []
-        },
-        {
-            "id": "horizontal_anchor",
-            "instance": "d30f004e-eb0d-43f8-ae65-f057b04a44bf",
-            "latches": []
-        },
-        {
-            "id": "vertical_anchor",
-            "instance": "1c156e34-cc9b-44f9-802a-0e5f44bb9611",
-            "latches": []
-        },
-        {
-            "id": "vertical_anchor",
-            "instance": "e17194af-1436-4de8-b873-79d9dccbb259",
-            "latches": []
-        },
-        {
-            "id": "vertical_anchor",
-            "instance": "19e8e169-95e1-4a46-8dfe-e94f8e3115c5",
-            "latches": []
-        },
-        {
-            "id": "horizontal_anchor",
-            "instance": "29635e81-6546-467c-899d-0cc1fc9a9e6e",
             "latches": []
         },
         {
@@ -3043,123 +2809,6 @@
             "latches": []
         },
         {
-            "id": "action",
-            "instance": "80dadd32-7a13-43da-b12b-08366b7d8c64",
-            "properties": [
-                [
-                    "name",
-                    "DoJ Cryptocurrency Seizure (~$2.3M)"
-                ],
-                [
-                    "ttp",
-                    [
-                        [
-                            "tactic",
-                            null
-                        ],
-                        [
-                            "technique",
-                            null
-                        ]
-                    ]
-                ],
-                [
-                    "description",
-                    "DoJ traced Bitcoin wallet and seized ~63.7 BTC (~$2.3M). [DoJ Press Release]"
-                ],
-                [
-                    "confidence",
-                    null
-                ],
-                [
-                    "execution_start",
-                    null
-                ],
-                [
-                    "execution_end",
-                    null
-                ]
-            ],
-            "anchors": {
-                "0": "7f8f995a-7652-423c-b5fa-d8b5e0ef18ae",
-                "30": "873f916d-8c28-47a0-ae2f-f79da88b2a2a",
-                "60": "ca14ac78-05a0-4f91-bf63-43672d86da57",
-                "90": "ab0cae3d-05e7-4866-9935-7b773b1b2169",
-                "120": "3ca74cf1-c9c1-48ce-a487-e82844ecc1e7",
-                "150": "39bfe2a7-e837-4830-998a-b725afdc3a54",
-                "180": "8dbddeba-dccb-4606-9ed4-eaf7389f8678",
-                "210": "90079ae4-d6dd-493a-9c9b-cbc48b9c2535",
-                "240": "1a12507a-ad08-46c8-9177-884e05306c86",
-                "270": "84131ade-f0e7-4522-955e-6e86cb4834b3",
-                "300": "4a62e018-54c5-46bf-849c-4584daa116e4",
-                "330": "e3f2b493-306c-4f70-93df-cae7fe1ba356"
-            }
-        },
-        {
-            "id": "horizontal_anchor",
-            "instance": "7f8f995a-7652-423c-b5fa-d8b5e0ef18ae",
-            "latches": [
-                "2c8b9ea5-5482-4255-9e41-15a89884d9a3"
-            ]
-        },
-        {
-            "id": "horizontal_anchor",
-            "instance": "873f916d-8c28-47a0-ae2f-f79da88b2a2a",
-            "latches": []
-        },
-        {
-            "id": "vertical_anchor",
-            "instance": "ca14ac78-05a0-4f91-bf63-43672d86da57",
-            "latches": []
-        },
-        {
-            "id": "vertical_anchor",
-            "instance": "ab0cae3d-05e7-4866-9935-7b773b1b2169",
-            "latches": [
-                "338712f6-c493-45bc-a747-e3aee996c42d"
-            ]
-        },
-        {
-            "id": "vertical_anchor",
-            "instance": "3ca74cf1-c9c1-48ce-a487-e82844ecc1e7",
-            "latches": []
-        },
-        {
-            "id": "horizontal_anchor",
-            "instance": "39bfe2a7-e837-4830-998a-b725afdc3a54",
-            "latches": []
-        },
-        {
-            "id": "horizontal_anchor",
-            "instance": "8dbddeba-dccb-4606-9ed4-eaf7389f8678",
-            "latches": []
-        },
-        {
-            "id": "horizontal_anchor",
-            "instance": "90079ae4-d6dd-493a-9c9b-cbc48b9c2535",
-            "latches": []
-        },
-        {
-            "id": "vertical_anchor",
-            "instance": "1a12507a-ad08-46c8-9177-884e05306c86",
-            "latches": []
-        },
-        {
-            "id": "vertical_anchor",
-            "instance": "84131ade-f0e7-4522-955e-6e86cb4834b3",
-            "latches": []
-        },
-        {
-            "id": "vertical_anchor",
-            "instance": "4a62e018-54c5-46bf-849c-4584daa116e4",
-            "latches": []
-        },
-        {
-            "id": "horizontal_anchor",
-            "instance": "e3f2b493-306c-4f70-93df-cae7fe1ba356",
-            "latches": []
-        },
-        {
             "id": "note",
             "instance": "85b7b304-c500-4f4d-9c2c-97c3594b20a9",
             "properties": [
@@ -3225,7 +2874,7 @@
             "id": "horizontal_anchor",
             "instance": "eda85878-d590-482d-9431-da0f0429053c",
             "latches": [
-                "8bdcc839-505a-4208-a182-1428abcc8589"
+                "e09d1957-09fd-4c51-8262-e9589053b924"
             ]
         },
         {
@@ -3346,6 +2995,294 @@
             "id": "horizontal_anchor",
             "instance": "37429269-897f-4feb-ad2f-71332ac6209b",
             "latches": []
+        },
+        {
+            "id": "note",
+            "instance": "6f90bb6b-8b49-4506-bf1a-fe0e9507003f",
+            "properties": [
+                [
+                    "abstract",
+                    "DoJ Cryptocurrency Seizure (~$2.3M)"
+                ],
+                [
+                    "content",
+                    "DoJ traced Bitcoin wallet and seized ~63.7 BTC (~$2.3M). [DoJ Press Release]"
+                ],
+                [
+                    "authors",
+                    []
+                ]
+            ],
+            "anchors": {
+                "0": "8e614080-d26a-4068-8ada-e2551e55b828",
+                "30": "77588e86-c153-473b-9776-1be35b0d0dd0",
+                "60": "891ff4d1-dd7e-4d42-8bcb-4897d6cda1f5",
+                "90": "1fd45ddc-9106-4c78-b23b-5db06cd9be85",
+                "120": "a2f0397d-cc8b-4d74-b25a-6c2e15f65025",
+                "150": "ad02e452-d657-43e7-8a24-96f528cec96b",
+                "180": "b1cbb20f-d4ea-42c5-ad51-5f62f971bddc",
+                "210": "ff762d6d-871c-47c4-92e6-8251c360ca82",
+                "240": "2d2eb1db-34e7-4ce4-bf8e-546dc57517af",
+                "270": "16288f85-ca8d-4de5-8178-e8633b5126e0",
+                "300": "9ba1b871-7603-4d14-8f1b-3e747b8105bf",
+                "330": "29b6fb6f-5278-41b2-821c-7f55983cd763"
+            }
+        },
+        {
+            "id": "horizontal_anchor",
+            "instance": "8e614080-d26a-4068-8ada-e2551e55b828",
+            "latches": [
+                "f37a88ed-eae9-4e12-9581-32bfcbbe78f3"
+            ]
+        },
+        {
+            "id": "horizontal_anchor",
+            "instance": "77588e86-c153-473b-9776-1be35b0d0dd0",
+            "latches": []
+        },
+        {
+            "id": "vertical_anchor",
+            "instance": "891ff4d1-dd7e-4d42-8bcb-4897d6cda1f5",
+            "latches": []
+        },
+        {
+            "id": "vertical_anchor",
+            "instance": "1fd45ddc-9106-4c78-b23b-5db06cd9be85",
+            "latches": [
+                "02f7efa7-deea-4a6a-afd4-1d428bac5c21"
+            ]
+        },
+        {
+            "id": "vertical_anchor",
+            "instance": "a2f0397d-cc8b-4d74-b25a-6c2e15f65025",
+            "latches": []
+        },
+        {
+            "id": "horizontal_anchor",
+            "instance": "ad02e452-d657-43e7-8a24-96f528cec96b",
+            "latches": []
+        },
+        {
+            "id": "horizontal_anchor",
+            "instance": "b1cbb20f-d4ea-42c5-ad51-5f62f971bddc",
+            "latches": []
+        },
+        {
+            "id": "horizontal_anchor",
+            "instance": "ff762d6d-871c-47c4-92e6-8251c360ca82",
+            "latches": []
+        },
+        {
+            "id": "vertical_anchor",
+            "instance": "2d2eb1db-34e7-4ce4-bf8e-546dc57517af",
+            "latches": []
+        },
+        {
+            "id": "vertical_anchor",
+            "instance": "16288f85-ca8d-4de5-8178-e8633b5126e0",
+            "latches": []
+        },
+        {
+            "id": "vertical_anchor",
+            "instance": "9ba1b871-7603-4d14-8f1b-3e747b8105bf",
+            "latches": []
+        },
+        {
+            "id": "horizontal_anchor",
+            "instance": "29b6fb6f-5278-41b2-821c-7f55983cd763",
+            "latches": []
+        },
+        {
+            "id": "note",
+            "instance": "d6a2b0e6-9860-4675-b47d-a26a1860e5aa",
+            "properties": [
+                [
+                    "abstract",
+                    "Partial Restoration of Operations"
+                ],
+                [
+                    "content",
+                    "Decryption tool provided by DarkSide was slow; Colonial rebuilt systems in parallel. [CISA/FBI Joint Advisory]"
+                ],
+                [
+                    "authors",
+                    []
+                ]
+            ],
+            "anchors": {
+                "0": "62d2020e-c120-480a-b841-6bc40a9f74a2",
+                "30": "130507f2-5fe5-4d50-9f70-ad364bc5f25d",
+                "60": "4b210190-340f-45bc-aac1-931ac63b0051",
+                "90": "72d04ec2-1eec-4022-89a7-4f84f57d64f3",
+                "120": "4d4ba1f3-1d1b-46cb-8078-349adf5d2e55",
+                "150": "3ce9e711-6a3b-4b72-a6a6-78af29578c0f",
+                "180": "4d059f81-e823-4c9e-bd12-fa9e1c84e59f",
+                "210": "f961bfa6-5862-40e7-a676-5a028da361b4",
+                "240": "c9a267ef-350c-4512-93ad-3ebe9a84f218",
+                "270": "f781668f-af09-46d3-84b5-9fdefb0703db",
+                "300": "8c5f7ca6-7e5a-4e27-8bbb-f32bedbd3319",
+                "330": "86a4328d-2098-43b7-bb28-f59f088f42ed"
+            }
+        },
+        {
+            "id": "horizontal_anchor",
+            "instance": "62d2020e-c120-480a-b841-6bc40a9f74a2",
+            "latches": []
+        },
+        {
+            "id": "horizontal_anchor",
+            "instance": "130507f2-5fe5-4d50-9f70-ad364bc5f25d",
+            "latches": []
+        },
+        {
+            "id": "vertical_anchor",
+            "instance": "4b210190-340f-45bc-aac1-931ac63b0051",
+            "latches": []
+        },
+        {
+            "id": "vertical_anchor",
+            "instance": "72d04ec2-1eec-4022-89a7-4f84f57d64f3",
+            "latches": [
+                "e94c9c57-e9ef-49ff-b0e9-dadb879797de"
+            ]
+        },
+        {
+            "id": "vertical_anchor",
+            "instance": "4d4ba1f3-1d1b-46cb-8078-349adf5d2e55",
+            "latches": []
+        },
+        {
+            "id": "horizontal_anchor",
+            "instance": "3ce9e711-6a3b-4b72-a6a6-78af29578c0f",
+            "latches": []
+        },
+        {
+            "id": "horizontal_anchor",
+            "instance": "4d059f81-e823-4c9e-bd12-fa9e1c84e59f",
+            "latches": []
+        },
+        {
+            "id": "horizontal_anchor",
+            "instance": "f961bfa6-5862-40e7-a676-5a028da361b4",
+            "latches": []
+        },
+        {
+            "id": "vertical_anchor",
+            "instance": "c9a267ef-350c-4512-93ad-3ebe9a84f218",
+            "latches": []
+        },
+        {
+            "id": "vertical_anchor",
+            "instance": "f781668f-af09-46d3-84b5-9fdefb0703db",
+            "latches": []
+        },
+        {
+            "id": "vertical_anchor",
+            "instance": "8c5f7ca6-7e5a-4e27-8bbb-f32bedbd3319",
+            "latches": []
+        },
+        {
+            "id": "horizontal_anchor",
+            "instance": "86a4328d-2098-43b7-bb28-f59f088f42ed",
+            "latches": []
+        },
+        {
+            "id": "note",
+            "instance": "0a52f30c-935b-48b4-9f8d-c6b470add83c",
+            "properties": [
+                [
+                    "abstract",
+                    "Ransom Payment (~$4.4M in Bitcoin)"
+                ],
+                [
+                    "content",
+                    "Colonial Pipeline CEO testified ransom was paid quickly (~May 7, 2021). [Senate Testimony]"
+                ],
+                [
+                    "authors",
+                    []
+                ]
+            ],
+            "anchors": {
+                "0": "ab32b5fc-9aca-4273-9fcb-fed4a91b9f49",
+                "30": "f6bf8035-166f-4b78-bbc5-2a7aa6ae1d62",
+                "60": "25623409-b3e6-4b8f-85aa-29c5145e2ccb",
+                "90": "7d3cc58b-7733-4334-816c-511a41cff891",
+                "120": "eb1734de-da86-4f2c-9b5e-7b046aa0df76",
+                "150": "206c9f55-fda5-4c42-85ed-8f06aac978a2",
+                "180": "9091b1fb-8dd3-4a1a-b500-f47156c762d8",
+                "210": "9019b4da-ea6f-4d4a-ad9a-482693c9e158",
+                "240": "3b7ae8d3-35fd-40f1-ae85-afa99c6a62a7",
+                "270": "f5625f3d-1a3b-4722-b142-3dd0c82b1871",
+                "300": "9f7fc5f0-1189-42e0-b9e8-fc45b919dc0b",
+                "330": "f439f4b2-dca9-4431-a58e-bd397ff13910"
+            }
+        },
+        {
+            "id": "horizontal_anchor",
+            "instance": "ab32b5fc-9aca-4273-9fcb-fed4a91b9f49",
+            "latches": [
+                "61e438ce-dd28-4035-9d1c-210d2bbbeed0"
+            ]
+        },
+        {
+            "id": "horizontal_anchor",
+            "instance": "f6bf8035-166f-4b78-bbc5-2a7aa6ae1d62",
+            "latches": []
+        },
+        {
+            "id": "vertical_anchor",
+            "instance": "25623409-b3e6-4b8f-85aa-29c5145e2ccb",
+            "latches": []
+        },
+        {
+            "id": "vertical_anchor",
+            "instance": "7d3cc58b-7733-4334-816c-511a41cff891",
+            "latches": []
+        },
+        {
+            "id": "vertical_anchor",
+            "instance": "eb1734de-da86-4f2c-9b5e-7b046aa0df76",
+            "latches": []
+        },
+        {
+            "id": "horizontal_anchor",
+            "instance": "206c9f55-fda5-4c42-85ed-8f06aac978a2",
+            "latches": []
+        },
+        {
+            "id": "horizontal_anchor",
+            "instance": "9091b1fb-8dd3-4a1a-b500-f47156c762d8",
+            "latches": []
+        },
+        {
+            "id": "horizontal_anchor",
+            "instance": "9019b4da-ea6f-4d4a-ad9a-482693c9e158",
+            "latches": []
+        },
+        {
+            "id": "vertical_anchor",
+            "instance": "3b7ae8d3-35fd-40f1-ae85-afa99c6a62a7",
+            "latches": []
+        },
+        {
+            "id": "vertical_anchor",
+            "instance": "f5625f3d-1a3b-4722-b142-3dd0c82b1871",
+            "latches": [
+                "5ac8fd7b-7268-4d03-ab52-39138e8e5835"
+            ]
+        },
+        {
+            "id": "vertical_anchor",
+            "instance": "9f7fc5f0-1189-42e0-b9e8-fc45b919dc0b",
+            "latches": [
+                "58e3de03-5dc4-4f58-82d8-1d8c0e855b9a"
+            ]
+        },
+        {
+            "id": "horizontal_anchor",
+            "instance": "f439f4b2-dca9-4431-a58e-bd397ff13910",
+            "latches": []
         }
     ],
     "layout": {
@@ -3421,25 +3358,13 @@
             130,
             1255
         ],
-        "454cc69f-a3d7-4514-a6c9-c65b6e22b490": [
-            -270,
-            1480
-        ],
         "dfad1ddd-eada-4dca-860a-4708998aeb7e": [
             945,
             1480
         ],
-        "91223faf-5e74-45b5-9105-fc3543cda407": [
-            -270,
-            1850
-        ],
         "1fc7858c-5b43-4e74-bef6-965fb046914f": [
             -800,
             1860
-        ],
-        "80dadd32-7a13-43da-b12b-08366b7d8c64": [
-            145,
-            1855
         ],
         "85b7b304-c500-4f4d-9c2c-97c3594b20a9": [
             535,
@@ -3448,11 +3373,23 @@
         "82fff74b-05d9-4903-8272-b133367afca7": [
             950,
             1895
+        ],
+        "6f90bb6b-8b49-4506-bf1a-fe0e9507003f": [
+            135,
+            1855
+        ],
+        "d6a2b0e6-9860-4675-b47d-a26a1860e5aa": [
+            -280,
+            1840
+        ],
+        "0a52f30c-935b-48b4-9f8d-c6b470add83c": [
+            -280,
+            1480
         ]
     },
     "camera": {
-        "x": 211,
-        "y": 804,
-        "k": 0.6525586837408246
+        "x": 495,
+        "y": 586,
+        "k": 0.3262793418704124
     }
 }
