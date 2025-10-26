@@ -61,10 +61,26 @@ def write_csv(rows, cols, counts, out_csv: Path):
     out_csv.parent.mkdir(parents=True, exist_ok=True)
     with out_csv.open("w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
-        w.writerow(["Case"] + cols)
+
+        # Header: codes + "Total"
+        w.writerow(["Case"] + cols + ["Total"])
+
+        # Body: each case + row total
+        col_totals = [0] * len(cols)
+        grand_total = 0
+
         for r in rows:
             c = counts.get(r, Counter())
-            w.writerow([r] + [c.get(code, 0) for code in cols])
+            vals = [c.get(code, 0) for code in cols]
+            row_total = sum(vals)
+            w.writerow([r] + vals + [row_total])
+
+            # accumulate column totals
+            col_totals = [a + b for a, b in zip(col_totals, vals)]
+            grand_total += row_total
+
+        # Footer: TOTAL row (column sums + grand total)
+        w.writerow(["TOTAL"] + col_totals + [grand_total])
 
 # ---------- Renderer ----------
 def save_table_png(title, rows, cols, counts, out_png: Path):
@@ -147,6 +163,54 @@ def save_table_png(title, rows, cols, counts, out_png: Path):
     fig.savefig(out_png, bbox_inches="tight", pad_inches=0.03)
     plt.close(fig)
 
+# ---------- Histograms ----------
+def save_hist_png_sorted_by_code(title, rows, cols, counts, out_png, include_zeros=True):
+    """
+    Sum counts across all cases for each code in cols, then plot a vertical bar chart.
+    - Sorted by code label (lexicographic)
+    - Bars colored with COLOR_2_MID
+    - Y-axis is the count
+    """
+    # Totals per code (keep zeros if requested)
+    totals = []
+    for code in cols:
+        s = sum(counts.get(r, Counter()).get(code, 0) for r in rows)
+        if include_zeros or s > 0:
+            totals.append((code, s))
+
+    # Sort by code (tactic/tech label)
+    totals.sort(key=lambda x: x[0])
+
+    if not totals:
+        print(f"[warn] No totals for {title}; skipping plot.")
+        return
+
+    labels, values = zip(*totals)
+    n = len(values)
+
+    # Dynamic sizing: widen with number of codes
+    fig_w = max(6.5, 0.4 * n + 2.0)
+    fig_h = 4.5
+
+    fig, ax = plt.subplots(figsize=(fig_w, fig_h), dpi=200)
+    ax.bar(range(n), values, color=COLOR_2_MID)  # mid green
+    ax.set_xticks(range(n), labels, rotation=60, ha="right")
+    ax.set_ylabel("Count")
+    ax.set_title(title, pad=6)
+
+    # Light grid & value labels
+    ax.grid(axis="y", linestyle="--", alpha=0.3)
+    ymax = max(values) if values else 1
+    for i, v in enumerate(values):
+        ax.text(i, v + ymax*0.02, str(v), va="bottom", ha="center", fontsize=8)
+
+    plt.tight_layout()
+    out_png.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(out_png, bbox_inches="tight", pad_inches=0.03)
+    plt.close(fig)
+
+
+
 # ---------- Run ----------
 if __name__ == "__main__":
     counts, ta_cols, t_cols = collect_counts()
@@ -157,10 +221,15 @@ if __name__ == "__main__":
     t_png  = out_dir / "T_table.png"
     ta_csv = out_dir / "TA_table.csv"
     t_csv  = out_dir / "T_table.csv"
+    ta_hist_png = out_dir / "TA_hist.png"
+    t_hist_png  = out_dir / "T_hist.png"
+
 
     # PNGs
-    save_table_png("Figure 1: ATT&CK Tactics (TA####) counts", row_order, ta_cols, counts, ta_png)
-    save_table_png("Figure 2: ATT&CK Techniques (T####) counts", row_order, t_cols, counts, t_png)
+    save_table_png("Figure 1: ATT&CK Tactics counts", row_order, ta_cols, counts, ta_png)
+    save_table_png("Figure 2: ATT&CK Techniques counts", row_order, t_cols, counts, t_png)
+    save_hist_png_sorted_by_code("Figure 3: ATT&CK Tactics frequency", row_order, ta_cols, counts, ta_hist_png)
+    save_hist_png_sorted_by_code("Figure 4: ATT&CK Techniques frequency", row_order, t_cols, counts, t_hist_png)
 
     # CSVs
     write_csv(row_order, ta_cols, counts, ta_csv)
