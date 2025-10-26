@@ -9,7 +9,7 @@ references:
   Australian Cyber Center / ACSC Alert - Describes supply-chain angle and CVE exploited (CVE-2021-30116). - https://www.cyber.gov.au/about-us/alerts/kaseya-vsa-supply-chain-ransomware-attack
   Bleeping Computer - Reports 13y7m sentence, $16M restitution. - https://www.bleepingcomputer.com/news/security/revil-hacker-behind-kaseya-ransomware-attack-gets-13-years-in-prison/
   MSSP Alert - FBI held decryption key ~3 weeks before sharing with victims. - https://www.msspalert.com/news/fbi-withheld-revil-ransomware-decryptor-key-as-some-msps-suffered-encryption
-  Wikipedia - Well-cited. Zero-day exploit, universal decryptor demand, infrastructure take down. - https://en.wikipedia.org/wiki/Kaseya_VSA_ransomware_attack?utm_source=chatgpt.com
+  Wikipedia - Well-cited. Zero-day exploit, universal decryptor demand, infrastructure take down. - https://en.wikipedia.org/wiki/Kaseya_VSA_ransomware_attack
 
 ------------------------------------------------------------
 
